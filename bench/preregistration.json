@@ -1,0 +1,196 @@
+{
+  "id": "bachelor_n8n_vs_rag_prereg_thesis_batch_2026-03-16",
+  "schema_version": "thesis-batch/v1",
+  "execution_model": {
+    "batch_kind": "paired_isolated_batches",
+    "target_endpoints": ["rag", "n8n"],
+    "child_batch_repetitions": 1,
+    "pair_repetitions": 3,
+    "pair_order_mode": "alternate_by_rep",
+    "thesis_compare_runner": "bench/run_compare_pair.sh"
+  },
+  "scope": {
+    "cache_regime": "warm",
+    "prompt_set": "in_scope",
+    "prompts_path": "/bench/prompts.json",
+    "sweep_prompt_scheduler": "arrival_global",
+    "sweep_run_tags": ["sweep_primary"],
+    "knee_stage1_run_tags": ["sweep_primary"],
+    "runtime_override_policy": {
+      "allowed_via_env": true,
+      "thesis_grade_requires_manifest_match": true
+    }
+  },
+  "preconditions": {
+    "boundary_audit": {
+      "required": true,
+      "role": "validity_precheck",
+      "not_part_of_performance_analysis": true
+    }
+  },
+  "windows": {
+    "settle_s": 180,
+    "measure_s": 720,
+    "metrics_scope": "measure_only"
+  },
+  "design": {
+    "sweep_track": {
+      "executor": "constant-arrival-rate",
+      "load_param": "offered_rpm",
+      "stage1_primary": {
+        "offered_rpm": {"start": 10, "stop": 100, "step": 10},
+        "repetitions": 3
+      }
+    }
+  },
+  "comparison": {
+    "primary_result": {
+      "name": "full_sweep_operating_quality",
+      "basis": "pair_valid_shared_points",
+      "shared_valid_point_definition": "same offered_rpm, same prompt_set, all planned pair reps valid for both systems across isolated child batches",
+      "metrics": {
+        "throughput_success_rps": {"direction": "higher_better"},
+        "latency_p95_s": {"direction": "lower_better"},
+        "timeout_rate": {"direction": "lower_better"},
+        "error_rate_total": {"direction": "lower_better"}
+      },
+      "supporting_metrics": {
+        "error_rate_non_timeout": {"role": "diagnostic_reliability_split"}
+      },
+      "report": [
+        "per_rpm_side_by_side",
+        "win_loss_tie_counts",
+        "median_per_rpm_differences",
+        "validity_coverage"
+      ]
+    },
+    "secondary_scalability": {
+      "frontier": {
+        "x_axis": "throughput_success_rps",
+        "y_axis_primary": "latency_p95_s",
+        "role": "supporting_summary"
+      },
+      "sustainability": {
+        "metric": "sustainable_throughput_success_rps",
+        "role": "supporting_summary"
+      }
+    },
+    "overall_winner_rule": {
+      "requires": [
+        "no_worse_validity_coverage",
+        "wins_timeout_rate_across_shared_valid_points",
+        "wins_error_rate_total_across_shared_valid_points",
+        "wins_throughput_success_rps_or_latency_p95_s_across_shared_valid_points",
+        "not_worse_sustainable_throughput_success_rps"
+      ],
+      "else_report": "trade_off_not_single_winner"
+    }
+  },
+  "metrics": {
+    "attempts": {
+      "source": "k6.summary.metrics.attempts_measure.count",
+      "unit": "count"
+    },
+    "successes": {
+      "source": "k6.summary.metrics.successes_measure.count",
+      "unit": "count"
+    },
+    "throughput_success_rps": {
+      "definition": "successes / measure_seconds",
+      "unit": "req/s"
+    },
+    "throughput_attempt_rps": {
+      "definition": "attempts / measure_seconds",
+      "unit": "req/s"
+    },
+    "timeout_rate": {
+      "definition": "timeouts / attempts (measure window)",
+      "source": "k6.summary.metrics.timeouts_measure.count / k6.summary.metrics.attempts_measure.count",
+      "unit": "ratio"
+    },
+    "error_rate_total": {
+      "definition": "errors_total / attempts (measure window)",
+      "source": "k6.summary.metrics.errors_total_measure.count / k6.summary.metrics.attempts_measure.count",
+      "unit": "ratio"
+    },
+    "error_rate_non_timeout": {
+      "definition": "errors_non_timeout / attempts (measure window)",
+      "source": "k6.summary.metrics.errors_non_timeout_measure.count / k6.summary.metrics.attempts_measure.count",
+      "unit": "ratio"
+    },
+    "latency": {
+      "source": "k6.summary.metrics.latency_measure_ms (successful requests only)",
+      "unit": "ms",
+      "report": ["p50", "p95"]
+    },
+    "token_usage_per_success": {
+      "prompt_tokens": {
+        "source": "k6.summary.metrics.tokens_prompt",
+        "unit": "tokens",
+        "report": ["avg", "p95"],
+        "direction": "lower_better",
+        "role": "supporting_efficiency"
+      },
+      "completion_tokens": {
+        "source": "k6.summary.metrics.tokens_completion",
+        "unit": "tokens",
+        "report": ["avg", "p95"],
+        "direction": "lower_better",
+        "role": "supporting_efficiency"
+      },
+      "total_tokens": {
+        "source": "k6.summary.metrics.tokens_total",
+        "unit": "tokens",
+        "report": ["avg", "p95"],
+        "direction": "lower_better",
+        "role": "supporting_efficiency"
+      }
+    }
+  },
+  "gates": {
+    "timeout_compliance": {
+      "timeout_rate_max": 0.01,
+      "apply": {"per_rep": true, "per_point": true},
+      "per_point_rule": "all_reps_pass"
+    },
+    "loadgen_validity": {
+      "definition": "measure-window load generator integrity",
+      "require_dropped_iterations_zero": true,
+      "require_vus_max_below_cap": true,
+      "apply": {"per_rep": true, "per_point": true},
+      "per_point_rule": "all_reps_pass"
+    },
+    "prompt_mix_validity": {
+      "definition": "prompt distribution balance in measure window",
+      "metric": "attempts_measure_prompt{prompt_id:*}",
+      "fallback": {
+        "enabled_by_default": true,
+        "method": "arrival_global schedule reconstruction from prompt_order_<run_id>.json + attempts_measure_count",
+        "disabled_when": "BENCH_SWEEP_REQUIRE_PROMPT_TAGS=1"
+      },
+      "max_minus_min_attempts": 1,
+      "apply": {"per_rep": true, "per_point": true},
+      "per_point_rule": "all_reps_pass"
+    },
+    "error_non_timeout_compliance": {
+      "enabled": false,
+      "error_rate_non_timeout_max": null,
+      "apply": {"per_rep": true, "per_point": true},
+      "per_point_rule": "all_reps_pass_if_enabled"
+    }
+  },
+  "knee_detection": {
+    "order_by": "offered_rpm_asc",
+    "first_bad_triggers": [
+      "timeout_noncompliance",
+      "error_rate_slope_break",
+      "p95_slope_break"
+    ],
+    "piecewise_regression": {
+      "min_points_per_segment": 2,
+      "x_axis": "offered_rpm",
+      "p95": {"slope_factor": 2.5, "slope_abs_threshold_s_per_rpm": 0.005},
+      "error_rate_total": {"slope_factor": 3.0, "slope_abs_threshold_per_rpm": 0.001}
+    }
+  }
+}

@@ -1,0 +1,274 @@
+[
+  {
+    "Service": "cadvisor",
+    "ContainerName": "bench-cadvisor",
+    "ContainerID": "3e3794deaf4b",
+    "Image": "gcr.io/cadvisor/cadvisor:v0.49.1",
+    "ImageID": "sha256:3cde6faf0791ebf7b41d6f8ae7145466fed712ea6f252c935294d2608b1af388",
+    "RepoTags": [
+      "gcr.io/cadvisor/cadvisor:v0.49.1"
+    ],
+    "RepoDigests": [
+      "gcr.io/cadvisor/cadvisor@sha256:3cde6faf0791ebf7b41d6f8ae7145466fed712ea6f252c935294d2608b1af388"
+    ],
+    "Created": "2024-03-02T20:59:01.440808486Z",
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 32796371
+  },
+  {
+    "Service": "db",
+    "ContainerName": "db",
+    "ContainerID": "86f71cc9a820",
+    "Image": "supabase/postgres:15.8.1.085",
+    "ImageID": "sha256:af083ef64d0408c8f098ee6f5c364a59b26f36fbc0f3a334a62c5c1d57362e9b",
+    "RepoTags": [
+      "supabase/postgres:15.8.1.085"
+    ],
+    "RepoDigests": [
+      "supabase/postgres@sha256:af083ef64d0408c8f098ee6f5c364a59b26f36fbc0f3a334a62c5c1d57362e9b"
+    ],
+    "Created": "2025-05-05T14:33:13.382378253Z",
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 680807311
+  },
+  {
+    "Service": "jaeger",
+    "ContainerName": "bench-jaeger",
+    "ContainerID": "d3bc4e49fb31",
+    "Image": "jaegertracing/all-in-one:1.57",
+    "ImageID": "sha256:8f165334f418ca53691ce358c19b4244226ed35c5d18408c5acf305af2065fb9",
+    "RepoTags": [
+      "jaegertracing/all-in-one:1.57"
+    ],
+    "RepoDigests": [
+      "jaegertracing/all-in-one@sha256:8f165334f418ca53691ce358c19b4244226ed35c5d18408c5acf305af2065fb9"
+    ],
+    "Created": "2024-05-02T11:41:53.156389149Z",
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 34268745
+  },
+  {
+    "Service": "n8n",
+    "ContainerName": "n8n",
+    "ContainerID": "d94c9a30ee7d",
+    "Image": "n8nio/n8n:1.123.18",
+    "ImageID": "sha256:44cbecc752b57410a967f1a2f817f2632eee74a9674f2b7d8bc25aff2c88c40d",
+    "RepoTags": [
+      "n8nio/n8n:1.123.18"
+    ],
+    "RepoDigests": [
+      "n8nio/n8n@sha256:44cbecc752b57410a967f1a2f817f2632eee74a9674f2b7d8bc25aff2c88c40d"
+    ],
+    "Created": "2026-02-04T13:52:52.833348033Z",
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 286508256
+  },
+  {
+    "Service": "n8n-worker",
+    "ContainerName": "bachelor_n8n-worker_1",
+    "ContainerID": "61a9d225485f",
+    "Image": "n8nio/n8n:1.123.18",
+    "ImageID": "sha256:44cbecc752b57410a967f1a2f817f2632eee74a9674f2b7d8bc25aff2c88c40d",
+    "RepoTags": [
+      "n8nio/n8n:1.123.18"
+    ],
+    "RepoDigests": [
+      "n8nio/n8n@sha256:44cbecc752b57410a967f1a2f817f2632eee74a9674f2b7d8bc25aff2c88c40d"
+    ],
+    "Created": "2026-02-04T13:52:52.833348033Z",
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 286508256
+  },
+  {
+    "Service": "n8n-worker",
+    "ContainerName": "bachelor_n8n-worker_2",
+    "ContainerID": "fdea69cd2398",
+    "Image": "n8nio/n8n:1.123.18",
+    "ImageID": "sha256:44cbecc752b57410a967f1a2f817f2632eee74a9674f2b7d8bc25aff2c88c40d",
+    "RepoTags": [
+      "n8nio/n8n:1.123.18"
+    ],
+    "RepoDigests": [
+      "n8nio/n8n@sha256:44cbecc752b57410a967f1a2f817f2632eee74a9674f2b7d8bc25aff2c88c40d"
+    ],
+    "Created": "2026-02-04T13:52:52.833348033Z",
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 286508256
+  },
+  {
+    "Service": "n8n-worker",
+    "ContainerName": "bachelor_n8n-worker_3",
+    "ContainerID": "c151aa4ec032",
+    "Image": "n8nio/n8n:1.123.18",
+    "ImageID": "sha256:44cbecc752b57410a967f1a2f817f2632eee74a9674f2b7d8bc25aff2c88c40d",
+    "RepoTags": [
+      "n8nio/n8n:1.123.18"
+    ],
+    "RepoDigests": [
+      "n8nio/n8n@sha256:44cbecc752b57410a967f1a2f817f2632eee74a9674f2b7d8bc25aff2c88c40d"
+    ],
+    "Created": "2026-02-04T13:52:52.833348033Z",
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 286508256
+  },
+  {
+    "Service": "n8n-worker",
+    "ContainerName": "bachelor_n8n-worker_4",
+    "ContainerID": "d0f4c9288ae6",
+    "Image": "n8nio/n8n:1.123.18",
+    "ImageID": "sha256:44cbecc752b57410a967f1a2f817f2632eee74a9674f2b7d8bc25aff2c88c40d",
+    "RepoTags": [
+      "n8nio/n8n:1.123.18"
+    ],
+    "RepoDigests": [
+      "n8nio/n8n@sha256:44cbecc752b57410a967f1a2f817f2632eee74a9674f2b7d8bc25aff2c88c40d"
+    ],
+    "Created": "2026-02-04T13:52:52.833348033Z",
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 286508256
+  },
+  {
+    "Service": "n8n-worker",
+    "ContainerName": "bachelor_n8n-worker_5",
+    "ContainerID": "995a248e66f7",
+    "Image": "n8nio/n8n:1.123.18",
+    "ImageID": "sha256:44cbecc752b57410a967f1a2f817f2632eee74a9674f2b7d8bc25aff2c88c40d",
+    "RepoTags": [
+      "n8nio/n8n:1.123.18"
+    ],
+    "RepoDigests": [
+      "n8nio/n8n@sha256:44cbecc752b57410a967f1a2f817f2632eee74a9674f2b7d8bc25aff2c88c40d"
+    ],
+    "Created": "2026-02-04T13:52:52.833348033Z",
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 286508256
+  },
+  {
+    "Service": "node-exporter",
+    "ContainerName": "bench-node-exporter",
+    "ContainerID": "8e52c712bc81",
+    "Image": "prom/node-exporter:v1.8.1",
+    "ImageID": "sha256:fa7fa12a57eff607176d5c363d8bb08dfbf636b36ac3cb5613a202f3c61a6631",
+    "RepoTags": [
+      "prom/node-exporter:v1.8.1"
+    ],
+    "RepoDigests": [
+      "prom/node-exporter@sha256:fa7fa12a57eff607176d5c363d8bb08dfbf636b36ac3cb5613a202f3c61a6631"
+    ],
+    "Created": "2024-05-21T18:41:39.07258567Z",
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 12035093
+  },
+  {
+    "Service": "otel-collector",
+    "ContainerName": "bench-otel-collector",
+    "ContainerID": "a224f0cd1fcf",
+    "Image": "otel/opentelemetry-collector:0.105.0",
+    "ImageID": "sha256:56b275978745d866d4e8bcb15de9e51ef259b61210b87c387bfd336a30a69acb",
+    "RepoTags": [
+      "otel/opentelemetry-collector:0.105.0"
+    ],
+    "RepoDigests": [
+      "otel/opentelemetry-collector@sha256:56b275978745d866d4e8bcb15de9e51ef259b61210b87c387bfd336a30a69acb"
+    ],
+    "Created": "2024-07-16T22:48:31.270997686Z",
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 30285055
+  },
+  {
+    "Service": "postgres-exporter",
+    "ContainerName": "bench-postgres-exporter",
+    "ContainerID": "046e5e1a0d03",
+    "Image": "prometheuscommunity/postgres-exporter:v0.15.0",
+    "ImageID": "sha256:386b12d19eab2a37d7cd8ca8b4c7491cc7a830d9581f49af6c98a393da9605e6",
+    "RepoTags": [
+      "prometheuscommunity/postgres-exporter:v0.15.0"
+    ],
+    "RepoDigests": [
+      "prometheuscommunity/postgres-exporter@sha256:386b12d19eab2a37d7cd8ca8b4c7491cc7a830d9581f49af6c98a393da9605e6"
+    ],
+    "Created": "2023-10-27T14:42:03.171390518Z",
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 10049717
+  },
+  {
+    "Service": "prometheus",
+    "ContainerName": "bench-prometheus",
+    "ContainerID": "d292f0ce45d6",
+    "Image": "prom/prometheus:v2.52.0",
+    "ImageID": "sha256:5c435642ca4d8427ca26f4901c11114023004709037880cd7860d5b7176aa731",
+    "RepoTags": [
+      "prom/prometheus:v2.52.0"
+    ],
+    "RepoDigests": [
+      "prom/prometheus@sha256:5c435642ca4d8427ca26f4901c11114023004709037880cd7860d5b7176aa731"
+    ],
+    "Created": "2024-05-08T22:27:36.608646655Z",
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 107216079
+  },
+  {
+    "Service": "rag-pipeline",
+    "ContainerName": "bachelor_rag-pipeline_1",
+    "ContainerID": "e9b15e1d01f7",
+    "Image": "bachelor_rag-pipeline",
+    "ImageID": "sha256:4f2d94e586368139bdb979b29390da518434a533985dd80f40251da74b49488a",
+    "RepoTags": [
+      "bachelor_rag-pipeline:latest"
+    ],
+    "RepoDigests": [
+      "bachelor_rag-pipeline@sha256:4f2d94e586368139bdb979b29390da518434a533985dd80f40251da74b49488a"
+    ],
+    "Created": "2026-03-24T13:36:08.703530929Z",
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 277468601
+  },
+  {
+    "Service": "redis",
+    "ContainerName": "redis",
+    "ContainerID": "90ad55191e18",
+    "Image": "redis:7-alpine",
+    "ImageID": "sha256:ee64a64eaab618d88051c3ade8f6352d11531fcf79d9a4818b9b183d8c1d18ba",
+    "RepoTags": [
+      "redis:7-alpine"
+    ],
+    "RepoDigests": [
+      "redis@sha256:ee64a64eaab618d88051c3ade8f6352d11531fcf79d9a4818b9b183d8c1d18ba"
+    ],
+    "Created": "2025-11-03T17:39:59.311419342Z",
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 17253204
+  },
+  {
+    "Service": "redis-exporter",
+    "ContainerName": "bench-redis-exporter",
+    "ContainerID": "2a4a8dec1f67",
+    "Image": "oliver006/redis_exporter:v1.62.0",
+    "ImageID": "sha256:c5a968ba5f30bab5e12181cceb89c4ed37cb4fe4d85490b5b66c7cfe4750b5e8",
+    "RepoTags": [
+      "oliver006/redis_exporter:v1.62.0"
+    ],
+    "RepoDigests": [
+      "oliver006/redis_exporter@sha256:c5a968ba5f30bab5e12181cceb89c4ed37cb4fe4d85490b5b66c7cfe4750b5e8"
+    ],
+    "Created": "2024-07-17T20:53:05.706866334Z",
+    "Architecture": "amd64",
+    "Os": "linux",
+    "Size": 3471583
+  }
+]

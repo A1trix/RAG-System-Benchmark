@@ -1,0 +1,60 @@
+{
+  "cohorts": {
+    "n8n:in_scope": {
+      "endpoint": "n8n",
+      "knee": {
+        "first_bad_reasons": [
+          "timeout_noncompliance"
+        ],
+        "first_bad_rpm": 10,
+        "last_good_rpm": null,
+        "sustainable_throughput_success_rps": null
+      },
+      "knee_candidates": {
+        "error_rate_total": {
+          "break_index": 1,
+          "knee_reason": {
+            "abs_ok": false,
+            "delta": -0.03333333333333334,
+            "factor_ok": false,
+            "slope_abs_threshold": 0.001,
+            "slope_factor": 3.0
+          },
+          "knee_trigger": false,
+          "rpm_break_left": 20,
+          "rpm_break_right": 30,
+          "slope_left": 0.03333333333333334,
+          "slope_right": 0.0,
+          "sse": 2.465190328815662e-32,
+          "x_break": 20.0
+        },
+        "p95": null,
+        "timeout_first_bad_rpm": 10
+      },
+      "prompt_set": "in_scope"
+    }
+  },
+  "params": {
+    "bootstrap_iters": 5000,
+    "bootstrap_seed": 0,
+    "enforce_validity": false,
+    "error_non_timeout_max": null,
+    "expected_prompts": null,
+    "expected_reps": 3,
+    "include_run_tags": [
+      "sweep_primary"
+    ],
+    "knee_error_slope_abs_threshold": 0.001,
+    "knee_error_slope_factor": 3.0,
+    "knee_min_points_per_seg": 2,
+    "knee_p95_slope_abs_threshold": 0.005,
+    "knee_p95_slope_factor": 2.5,
+    "knee_run_tags": [
+      "sweep_primary"
+    ],
+    "require_prompt_tags": false,
+    "timeout_rate_max": 0.01
+  },
+  "results_dir": "bench/results/compare_20260324T160059Z",
+  "warnings": []
+}

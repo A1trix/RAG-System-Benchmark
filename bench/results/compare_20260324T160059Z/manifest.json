@@ -1,0 +1,183 @@
+{
+  "generated_at": "2026-03-25T09:23:11.147558+00:00",
+  "batch_kind": "isolated_parent_compare",
+  "target_endpoint": null,
+  "parent_compare_id": "compare_20260324T160059Z",
+  "child_batch_id": null,
+  "bench_env": {
+    "BENCH_MODE": null,
+    "TIMING_LOG_DIR": null,
+    "N8N_EXECUTIONS_DATA_SAVE_ON_SUCCESS": null,
+    "BENCH_CACHE_REGIME": null,
+    "BENCH_COLD_RESET_WAIT": null,
+    "BENCH_COLD_RESET_N8N_WORKERS": null,
+    "BENCH_STRICT": null,
+    "BENCH_PROMPTS_PATH": null,
+    "PROMPT_BASE_SEED": null,
+    "BENCH_MINIMAL_STACK": null,
+    "BENCH_N8N_WORKERS": null,
+    "BENCH_ARRIVAL_DURATION": null,
+    "BENCH_ARRIVAL_TIME_UNIT": null,
+    "BENCH_ARRIVAL_PREALLOCATED_VUS": null,
+    "BENCH_ARRIVAL_MAX_VUS": null,
+    "BENCH_SWEEP_SMOKE_RPM_LIST": null,
+    "BENCH_SWEEP_SMOKE_SETTLE_SECONDS": null,
+    "BENCH_SWEEP_SMOKE_MEASURE_SECONDS": null,
+    "BENCH_SWEEP_SMOKE_REPS": null,
+    "BENCH_SWEEP_PRIMARY_RPM_START": null,
+    "BENCH_SWEEP_PRIMARY_RPM_END": null,
+    "BENCH_SWEEP_PRIMARY_RPM_STEP": null,
+    "BENCH_SWEEP_PRIMARY_SETTLE_SECONDS": null,
+    "BENCH_SWEEP_PRIMARY_MEASURE_SECONDS": null,
+    "BENCH_SWEEP_PRIMARY_REPS": null,
+    "BENCH_SWEEP_STOP_AFTER_SMOKE": null,
+    "BENCH_SWEEP_TIMEOUT_RATE_MAX": null,
+    "BENCH_SWEEP_REQUIRE_PROMPT_TAGS": null,
+    "BENCH_PREREG_EVAL": null,
+    "BENCH_PREREG_ENFORCE": null,
+    "K6_HTTP_TIMEOUT": null,
+    "K6_REQUIRE_CITATIONS": null,
+    "BENCH_REQUIRE_BOUNDARY_AUDIT": null,
+    "BENCH_VALIDATE_BATCH_STRICT": null,
+    "BENCH_TARGET_ENDPOINT": null,
+    "BENCH_PARENT_COMPARE_ID": null,
+    "BENCH_CHILD_BATCH_ID": null,
+    "BENCH_PAIR_REP": null,
+    "BENCH_PAIR_ORDER": null,
+    "BENCH_PAIR_PROMPT_SEED": null,
+    "BENCH_PAIR_REPS": null,
+    "BENCH_PAIR_ORDER_MODE": null,
+    "BENCH_RESULTS_RELATIVE_DIR": null,
+    "N8N_WEBHOOK_URL": null,
+    "RAG_ENDPOINT_URL": null,
+    "RAG_WORKER_COUNT": null,
+    "RAG_API_WORKERS": null,
+    "RAG_TIMINGS_ON_ERROR_ONLY": null,
+    "LOG_OPENAI_USAGE": null,
+    "OTEL_TRACES_EXPORTER": null,
+    "OTEL_EXPORTER_OTLP_ENDPOINT": null,
+    "OTEL_TRACES_SAMPLER": null,
+    "OTEL_TRACES_SAMPLER_ARG": null,
+    "CHAT_MODEL": null,
+    "EMBEDDING_MODEL": null,
+    "OPENAI_BASE_URL": null,
+    "RETRIEVE_TOP_K": null,
+    "LLM_TEMPERATURE": null,
+    "LLM_TOP_P": null,
+    "LLM_MAX_COMPLETION_TOKENS": null,
+    "EMBEDDING_CACHE_ENABLED": null,
+    "VECTOR_SEARCH_CACHE_ENABLED": null,
+    "SEMANTIC_LLM_CACHE_ENABLED": null,
+    "LLM_CACHE_ENABLED": null,
+    "N8N_OPENAI_CREDENTIAL_NAME": null,
+    "N8N_OPENAI_CREDENTIAL_ID": null,
+    "N8N_CHAT_MODEL": null,
+    "N8N_EMBEDDING_MODEL": null,
+    "N8N_OPENAI_BASE_URL": null,
+    "N8N_WORKFLOW_ID": null
+  },
+  "artifacts": {
+    "source_fingerprint": {
+      "path": "source_fingerprint.json",
+      "sha256": null,
+      "fingerprint_sha256": null
+    },
+    "db_fingerprint_pre": {
+      "path": "db_fingerprint_pre.json",
+      "fingerprint_sha256": null
+    },
+    "db_fingerprint_post": {
+      "path": "db_fingerprint_post.json",
+      "fingerprint_sha256": null
+    },
+    "compose_ps": {
+      "path": "compose_ps.json",
+      "sha256": null
+    },
+    "pip_freeze_rag_pipeline": {
+      "path": "pip_freeze_rag-pipeline.txt",
+      "sha256": null
+    },
+    "rag_runtime_env": {
+      "path": "rag_runtime_env.txt",
+      "sha256": null
+    },
+    "n8n_workflow_chatbot_sha256": {
+      "path": "n8n_workflow_chatbot_sha256.txt",
+      "sha256": null
+    },
+    "n8n_workflow_runtime_snapshot": {
+      "path": "n8n_workflow_runtime_snapshot.json",
+      "sha256": null,
+      "workflow_content_sha256": null
+    },
+    "boundary_audit_report": {
+      "path": "boundary_audit_report.json",
+      "sha256": "ad9f1088cd438405a6f6185b7b1dad1ea4ff2fe26f1071d040c6b4c68c64b989",
+      "pass": true,
+      "token_ratio_n8n_over_rag": null
+    },
+    "thesis_batch_validation": {
+      "path": "thesis_batch_validation.json",
+      "sha256": null,
+      "pass": null
+    }
+  },
+  "docker_images": null,
+  "host_info": {
+    "platform": "Linux-6.8.0-106-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "hostname": "htrius-server",
+    "os": "Ubuntu 24.04.4 LTS",
+    "cpu_model": "AMD Ryzen 5 4500U with Radeon Graphics",
+    "memory_total_kb": 7481560
+  },
+  "preregistration": {
+    "path": "bench/preregistration.json",
+    "id": "bachelor_n8n_vs_rag_prereg_thesis_batch_2026-03-16",
+    "schema_version": "thesis-batch/v1",
+    "sha256": "b29ff280e55c57988309d640813c771970151728ddec96686689b3fb49e9b8f7"
+  },
+  "pairing": {
+    "pair_plan": {
+      "path": "bench/results/compare_20260324T160059Z/pair_plan.json",
+      "sha256": "6a28922d611feb88316247f0d72b9986222ecb7a71e62566721f87642bb36d65"
+    },
+    "pair_validation": {
+      "path": "bench/results/compare_20260324T160059Z/analysis/pair_validation.json",
+      "sha256": "dd757e98dc3b00079e605342ef335edfb758e00abb93aa145881c89dd869b97d",
+      "pass": true
+    },
+    "pair_comparison": {
+      "path": "bench/results/compare_20260324T160059Z/analysis/pair_comparison.json",
+      "sha256": "182eca122bb5283592d4a61fa583525573252b692c792d831daabe00e669677a"
+    },
+    "child_manifests": [
+      {
+        "path": "bench/results/compare_20260324T160059Z/children/rep01-rag/manifest.json",
+        "sha256": "a993557deadb168f6a9d2e71e2f421fb1c41a7501442155a6a1097554a860053"
+      },
+      {
+        "path": "bench/results/compare_20260324T160059Z/children/rep01-n8n/manifest.json",
+        "sha256": "2e0720a4aa8570a071dfcb786c43407cf2255bc810465eba0e20f271ff984244"
+      },
+      {
+        "path": "bench/results/compare_20260324T160059Z/children/rep02-rag/manifest.json",
+        "sha256": "445efbab61359e134e0dc68f6b403185c0bfd371a21963bce9f4c06b4bb18d10"
+      },
+      {
+        "path": "bench/results/compare_20260324T160059Z/children/rep02-n8n/manifest.json",
+        "sha256": "dadab1fb3c8dd084d32f83bca16b93d75372f498c2bca9f510f2012a1c3a655e"
+      },
+      {
+        "path": "bench/results/compare_20260324T160059Z/children/rep03-rag/manifest.json",
+        "sha256": "c31cb662cc2c4a0e445b90c20706f09249af191862f9ba288ac8295a0d500df7"
+      },
+      {
+        "path": "bench/results/compare_20260324T160059Z/children/rep03-n8n/manifest.json",
+        "sha256": "2fa679b42c2bb022f54c1a1865202bdd8b28a70f280b7f502e1f8d3b4198fbf2"
+      }
+    ]
+  },
+  "runs": []
+}

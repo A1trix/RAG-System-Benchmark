@@ -1,0 +1,100 @@
+{
+  "batch_kind": "isolated_parent_compare",
+  "conclusion_label": "trade_off_not_single_winner",
+  "criterion_winners": {
+    "error_rate_total": null,
+    "latency_p95_s": null,
+    "sustainable_throughput": null,
+    "throughput_success_rps": null,
+    "timeout_rate": null,
+    "validity_coverage": null
+  },
+  "decision_contract_version": "thesis-batch-decision/v1",
+  "has_shared_valid_points": true,
+  "knee": {
+    "n8n": {
+      "in_scope": {
+        "first_bad_reasons": [
+          "timeout_noncompliance"
+        ],
+        "first_bad_rpm": 10,
+        "last_good_rpm": null,
+        "sustainable_throughput_success_rps": null
+      }
+    }
+  },
+  "overall_winner": null,
+  "pair_validation_pass": true,
+  "prereg_boundary_audit_required": true,
+  "prereg_id": "bachelor_n8n_vs_rag_prereg_thesis_batch_2026-03-16",
+  "prereg_schema_version": "thesis-batch/v1",
+  "primary_metrics": {
+    "error_rate_total": {
+      "column": "error_rate_total_mean",
+      "comparisons": 0,
+      "higher_better": false,
+      "median_difference": {},
+      "winner": null,
+      "wins": {}
+    },
+    "latency_p95_s": {
+      "column": "latency_p95_s_mean",
+      "comparisons": 0,
+      "higher_better": false,
+      "median_difference": {},
+      "winner": null,
+      "wins": {}
+    },
+    "throughput_success_rps": {
+      "column": "throughput_success_rps_mean",
+      "comparisons": 0,
+      "higher_better": true,
+      "median_difference": {},
+      "winner": null,
+      "wins": {}
+    },
+    "timeout_rate": {
+      "column": "timeout_rate_mean",
+      "comparisons": 0,
+      "higher_better": false,
+      "median_difference": {},
+      "winner": null,
+      "wins": {}
+    }
+  },
+  "prompt_set": "in_scope",
+  "results_dir": "bench/results/compare_20260324T160059Z",
+  "shared_valid_offered_rpms": [
+    10,
+    20,
+    30,
+    40
+  ],
+  "sustainable_throughput_winner": null,
+  "validity_coverage": {
+    "n8n": {
+      "offered_rpms": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "point_count": 10,
+      "timeout_compliant_point_count": 0,
+      "timeout_compliant_rpms": [],
+      "valid_point_count": 4,
+      "valid_rpms": [
+        10,
+        20,
+        30,
+        40
+      ]
+    }
+  }
+}

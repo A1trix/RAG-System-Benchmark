@@ -1,0 +1,10 @@
+apiVersion: 1
+
+providers:
+  - name: Bench Dashboards
+    folder: Bench
+    type: file
+    disableDeletion: false
+    editable: true
+    options:
+      path: /var/lib/grafana/dashboards

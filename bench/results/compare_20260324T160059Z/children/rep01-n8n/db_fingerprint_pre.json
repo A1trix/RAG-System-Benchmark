@@ -1,0 +1,163 @@
+{
+  "db": {
+    "dbname": "postgres",
+    "host": "db",
+    "port": 5432,
+    "user": "postgres"
+  },
+  "fingerprint_sha256": "819b4d0df6d093682f836a9870548a0ea152d31807eefbb914ec4e37f29b7a38",
+  "generated_at": "2026-03-24T18:37:25.467494+00:00",
+  "tables": {
+    "document_metadata": {
+      "exists": true,
+      "grouped": [
+        {
+          "key": "FAQ_hTRIUS.pdf",
+          "row_count": 1
+        },
+        {
+          "key": "htrius_01_Unternehmen_Mission.pdf",
+          "row_count": 1
+        },
+        {
+          "key": "htrius_02_BionicBack_Produkt_Technik.pdf",
+          "row_count": 1
+        },
+        {
+          "key": "htrius_03_Studien_Zertifizierungen.pdf",
+          "row_count": 1
+        },
+        {
+          "key": "htrius_04_Branchen_Usecases.pdf",
+          "row_count": 1
+        },
+        {
+          "key": "htrius_05_Pilot_Rollout_ROI.pdf",
+          "row_count": 1
+        },
+        {
+          "key": "htrius_06_Service_Zubeh\u00f6r_Kontakt.pdf",
+          "row_count": 1
+        },
+        {
+          "key": "hTRIUS- Entlastungsreport- BionicBack.pdf",
+          "row_count": 1
+        }
+      ],
+      "table": "document_metadata",
+      "total_rows": 8
+    },
+    "document_rows": {
+      "exists": true,
+      "grouped": [],
+      "table": "document_rows",
+      "total_rows": 0
+    },
+    "documents": {
+      "distinct_file_ids": 8,
+      "exists": true,
+      "per_file": [
+        {
+          "chunk_count": 64,
+          "file_id": "FAQ_hTRIUS.pdf",
+          "text_len_max": 1000,
+          "text_len_min": 606,
+          "text_len_sum": 63606
+        },
+        {
+          "chunk_count": 2,
+          "file_id": "htrius_01_Unternehmen_Mission.pdf",
+          "text_len_max": 1000,
+          "text_len_min": 829,
+          "text_len_sum": 1829
+        },
+        {
+          "chunk_count": 2,
+          "file_id": "htrius_02_BionicBack_Produkt_Technik.pdf",
+          "text_len_max": 1000,
+          "text_len_min": 695,
+          "text_len_sum": 1695
+        },
+        {
+          "chunk_count": 2,
+          "file_id": "htrius_03_Studien_Zertifizierungen.pdf",
+          "text_len_max": 1000,
+          "text_len_min": 784,
+          "text_len_sum": 1784
+        },
+        {
+          "chunk_count": 2,
+          "file_id": "htrius_04_Branchen_Usecases.pdf",
+          "text_len_max": 1000,
+          "text_len_min": 395,
+          "text_len_sum": 1395
+        },
+        {
+          "chunk_count": 2,
+          "file_id": "htrius_05_Pilot_Rollout_ROI.pdf",
+          "text_len_max": 1000,
+          "text_len_min": 525,
+          "text_len_sum": 1525
+        },
+        {
+          "chunk_count": 2,
+          "file_id": "htrius_06_Service_Zubeh\u00f6r_Kontakt.pdf",
+          "text_len_max": 1000,
+          "text_len_min": 514,
+          "text_len_sum": 1514
+        },
+        {
+          "chunk_count": 13,
+          "file_id": "hTRIUS- Entlastungsreport- BionicBack.pdf",
+          "text_len_max": 1000,
+          "text_len_min": 472,
+          "text_len_sum": 12472
+        }
+      ],
+      "per_file_signatures": [
+        {
+          "embedding_md5": "2f75412ea56dd837673c78e19a4783af",
+          "file_id": "FAQ_hTRIUS.pdf",
+          "text_md5": "4d8900a3287f5b8aec147668bf6c3c17"
+        },
+        {
+          "embedding_md5": "8c49ab9f9bd8060d8f1d05f06696cf49",
+          "file_id": "htrius_01_Unternehmen_Mission.pdf",
+          "text_md5": "a803974c6b46015435d3cfc2f71494c7"
+        },
+        {
+          "embedding_md5": "b82bc7f30399d08523d716d92b1eff82",
+          "file_id": "htrius_02_BionicBack_Produkt_Technik.pdf",
+          "text_md5": "2d5c6544152f064d3cda328a874d1dd9"
+        },
+        {
+          "embedding_md5": "7d9e236c6fdfa74c0844f0a987a04de7",
+          "file_id": "htrius_03_Studien_Zertifizierungen.pdf",
+          "text_md5": "9c1f02302c97b24de3527a62e6472f9c"
+        },
+        {
+          "embedding_md5": "eb503b22abf505cd1a38617391dd9cf7",
+          "file_id": "htrius_04_Branchen_Usecases.pdf",
+          "text_md5": "6fe889243e12446a1adb849867ffab0b"
+        },
+        {
+          "embedding_md5": "fe827f844b22118c4d94699d0c5585cb",
+          "file_id": "htrius_05_Pilot_Rollout_ROI.pdf",
+          "text_md5": "c71c3e52ce6682dc5d6065e20f994df0"
+        },
+        {
+          "embedding_md5": "423848ea874cc4a3d4fee474b10e3c35",
+          "file_id": "htrius_06_Service_Zubeh\u00f6r_Kontakt.pdf",
+          "text_md5": "5ee5fe1032b88bd0ea3f09659a718293"
+        },
+        {
+          "embedding_md5": "7fb65bb2051ba88076719942a044b1a5",
+          "file_id": "hTRIUS- Entlastungsreport- BionicBack.pdf",
+          "text_md5": "2929eeda6fbdde528bdf282d8a28125f"
+        }
+      ],
+      "table": "documents_pg",
+      "total_rows": 89
+    }
+  }
+}

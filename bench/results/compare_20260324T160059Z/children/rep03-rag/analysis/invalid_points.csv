@@ -1,0 +1,13 @@
+row_type,run_id,run_tag,endpoint,prompt_set,offered_rpm,rep,reason_codes
+rep,arrival-rag-in_scope-50rpm-rep1-20260325T021952Z-warm,sweep_primary,rag,in_scope,50,1,prompt_mix_mismatch
+rep,arrival-rag-in_scope-60rpm-rep1-20260325T021952Z-warm,sweep_primary,rag,in_scope,60,1,prompt_mix_mismatch
+rep,arrival-rag-in_scope-70rpm-rep1-20260325T021952Z-warm,sweep_primary,rag,in_scope,70,1,"dropped_iterations,prompt_mix_mismatch"
+rep,arrival-rag-in_scope-80rpm-rep1-20260325T021952Z-warm,sweep_primary,rag,in_scope,80,1,"dropped_iterations,prompt_mix_mismatch"
+rep,arrival-rag-in_scope-90rpm-rep1-20260325T021952Z-warm,sweep_primary,rag,in_scope,90,1,"dropped_iterations,prompt_mix_mismatch"
+rep,arrival-rag-in_scope-100rpm-rep1-20260325T021952Z-warm,sweep_primary,rag,in_scope,100,1,"dropped_iterations,prompt_mix_mismatch"
+point,,sweep_primary,rag,in_scope,50,,prompt_mix_mismatch
+point,,sweep_primary,rag,in_scope,60,,prompt_mix_mismatch
+point,,sweep_primary,rag,in_scope,70,,"dropped_iterations,loadgen_invalid,prompt_mix_mismatch"
+point,,sweep_primary,rag,in_scope,80,,"dropped_iterations,loadgen_invalid,prompt_mix_mismatch"
+point,,sweep_primary,rag,in_scope,90,,"dropped_iterations,loadgen_invalid,prompt_mix_mismatch"
+point,,sweep_primary,rag,in_scope,100,,"dropped_iterations,loadgen_invalid,prompt_mix_mismatch"

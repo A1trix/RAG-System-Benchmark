@@ -1,0 +1,10 @@
+================================================================================
+PREREG COMPARISON DECISION
+================================================================================
+schema_version: thesis-batch/v1
+prompt_set: in_scope
+shared_valid_offered_rpms: [10, 20, 30, 40]
+overall_winner: None
+conclusion_label: trade_off_not_single_winner
+sustainable_throughput_winner: None
+================================================================================

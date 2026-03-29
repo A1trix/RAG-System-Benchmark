@@ -1,0 +1,208 @@
+{
+  "artifacts": {
+    "n8n_workflow_content_sha256": "5090df1f364161a6c912946462850a698e621d3969cd09f64025777ade11aea4",
+    "source_fingerprint_sha256": "913340d42af9a257341d0a24277151b3492f083406a7d1ed26df15565fae0368"
+  },
+  "expected": {
+    "chat_model": "gpt-5-nano",
+    "embedding_model": "text-embedding-3-small"
+  },
+  "failures": [],
+  "generated_at": "2026-03-24T15:58:20.825790+00:00",
+  "locked_params": {
+    "chat": {
+      "max_completion_tokens": 32768,
+      "model": "gpt-5-nano",
+      "temperature": 1.0,
+      "top_p": 1.0
+    },
+    "embeddings": {
+      "model": "text-embedding-3-small"
+    }
+  },
+  "notes": [
+    "This report verifies the LLM boundary based on proxy logs + request outcomes.",
+    "Verifies both systems use the same models and sampling parameters.",
+    "It is not a performance benchmark and should not be mixed into latency results."
+  ],
+  "observed_params": {
+    "n8n": {
+      "chat_completions": {
+        "calls": 26,
+        "temperature": {
+          "counts_by_value": {
+            "1": 26
+          },
+          "distinct": 1,
+          "field": "temperature",
+          "invalid": 0,
+          "missing": 0,
+          "total": 26,
+          "values": [
+            "1"
+          ]
+        },
+        "token_limit": {
+          "counts_by_value": {
+            "32768": 26
+          },
+          "distinct": 1,
+          "field": "token_limit",
+          "invalid": 0,
+          "missing": 0,
+          "total": 26,
+          "values": [
+            "32768"
+          ]
+        },
+        "token_limit_field": {
+          "counts_by_value": {
+            "max_completion_tokens": 26
+          },
+          "distinct": 1,
+          "field": "token_limit_field",
+          "invalid": 0,
+          "missing": 0,
+          "total": 26,
+          "values": [
+            "max_completion_tokens"
+          ]
+        },
+        "top_p": {
+          "counts_by_value": {
+            "1": 26
+          },
+          "distinct": 1,
+          "field": "top_p",
+          "invalid": 0,
+          "missing": 0,
+          "total": 26,
+          "values": [
+            "1"
+          ]
+        }
+      }
+    },
+    "rag": {
+      "chat_completions": {
+        "calls": 27,
+        "temperature": {
+          "counts_by_value": {
+            "1": 27
+          },
+          "distinct": 1,
+          "field": "temperature",
+          "invalid": 0,
+          "missing": 0,
+          "total": 27,
+          "values": [
+            "1"
+          ]
+        },
+        "token_limit": {
+          "counts_by_value": {
+            "32768": 27
+          },
+          "distinct": 1,
+          "field": "token_limit",
+          "invalid": 0,
+          "missing": 0,
+          "total": 27,
+          "values": [
+            "32768"
+          ]
+        },
+        "token_limit_field": {
+          "counts_by_value": {
+            "max_completion_tokens": 27
+          },
+          "distinct": 1,
+          "field": "token_limit_field",
+          "invalid": 0,
+          "missing": 0,
+          "total": 27,
+          "values": [
+            "max_completion_tokens"
+          ]
+        },
+        "top_p": {
+          "counts_by_value": {
+            "1": 27
+          },
+          "distinct": 1,
+          "field": "top_p",
+          "invalid": 0,
+          "missing": 0,
+          "total": 27,
+          "values": [
+            "1"
+          ]
+        }
+      }
+    }
+  },
+  "pass": true,
+  "proxy_status": {
+    "n8n": {
+      "ok_2xx": 37,
+      "ok_rate": 1.0,
+      "total": 37
+    },
+    "rag": {
+      "ok_2xx": 39,
+      "ok_rate": 1.0,
+      "total": 39
+    }
+  },
+  "proxy_summary": {
+    "n8n": {
+      "calls_by_model": {
+        "gpt-5-nano": 26,
+        "text-embedding-3-small": 11
+      },
+      "calls_by_path": {
+        "/v1/chat/completions": 26,
+        "/v1/embeddings": 11
+      },
+      "status_counts": {
+        "200": 37
+      },
+      "total_calls": 37,
+      "usage_totals": {
+        "completion_tokens": 40997,
+        "prompt_tokens": 64343,
+        "total_tokens": 105340
+      }
+    },
+    "rag": {
+      "calls_by_model": {
+        "gpt-5-nano": 27,
+        "text-embedding-3-small": 12
+      },
+      "calls_by_path": {
+        "/v1/chat/completions": 27,
+        "/v1/embeddings": 12
+      },
+      "status_counts": {
+        "200": 39
+      },
+      "total_calls": 39,
+      "usage_totals": {
+        "completion_tokens": 47254,
+        "prompt_tokens": 46098,
+        "total_tokens": 93352
+      }
+    }
+  },
+  "run_id": "boundary-20260324T154403Z",
+  "user_requests": {
+    "n8n": {
+      "ok": 15,
+      "total": 15
+    },
+    "rag": {
+      "ok": 15,
+      "total": 15
+    }
+  }
+}

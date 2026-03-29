@@ -1,0 +1,9 @@
+{
+  "checked_nodes_count": 1,
+  "failures": [],
+  "forbidden_hits": [],
+  "notes": [
+    "input looks like n8n_workflow_snapshot.py output (root.workflow)"
+  ],
+  "pass": true
+}

@@ -1,0 +1,67 @@
+{
+  "children": [
+    {
+      "child_batch_id": "rep01-rag",
+      "endpoint": "rag",
+      "order_index": 1,
+      "pair_order": "rag_first",
+      "pair_prompt_seed": 20260318,
+      "pair_rep": 1,
+      "parent_compare_id": "compare_20260324T160059Z",
+      "results_dir": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep01-rag"
+    },
+    {
+      "child_batch_id": "rep01-n8n",
+      "endpoint": "n8n",
+      "order_index": 2,
+      "pair_order": "rag_first",
+      "pair_prompt_seed": 20260318,
+      "pair_rep": 1,
+      "parent_compare_id": "compare_20260324T160059Z",
+      "results_dir": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep01-n8n"
+    },
+    {
+      "child_batch_id": "rep02-n8n",
+      "endpoint": "n8n",
+      "order_index": 1,
+      "pair_order": "n8n_first",
+      "pair_prompt_seed": 20260319,
+      "pair_rep": 2,
+      "parent_compare_id": "compare_20260324T160059Z",
+      "results_dir": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep02-n8n"
+    },
+    {
+      "child_batch_id": "rep02-rag",
+      "endpoint": "rag",
+      "order_index": 2,
+      "pair_order": "n8n_first",
+      "pair_prompt_seed": 20260319,
+      "pair_rep": 2,
+      "parent_compare_id": "compare_20260324T160059Z",
+      "results_dir": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep02-rag"
+    },
+    {
+      "child_batch_id": "rep03-rag",
+      "endpoint": "rag",
+      "order_index": 1,
+      "pair_order": "rag_first",
+      "pair_prompt_seed": 20260320,
+      "pair_rep": 3,
+      "parent_compare_id": "compare_20260324T160059Z",
+      "results_dir": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep03-rag"
+    },
+    {
+      "child_batch_id": "rep03-n8n",
+      "endpoint": "n8n",
+      "order_index": 2,
+      "pair_order": "rag_first",
+      "pair_prompt_seed": 20260320,
+      "pair_rep": 3,
+      "parent_compare_id": "compare_20260324T160059Z",
+      "results_dir": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep03-n8n"
+    }
+  ],
+  "pair_order_mode": "alternate_by_rep",
+  "pair_repetitions": 3,
+  "parent_compare_id": "compare_20260324T160059Z"
+}

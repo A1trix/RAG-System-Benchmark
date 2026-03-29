@@ -1,0 +1,91 @@
+# agents
+.agents
+
+# Secrets / env
+# .env
+.env.*
+!.env.example
+!.env.template
+!.env.sample
+!.env.dist
+.envrc
+.direnv/
+
+# Local TLS certs/keys (never commit)
+certs/*
+!certs/.gitkeep
+!certs/README.md
+
+# Runtime-mounted folders (ignore contents, keep placeholders)
+n8n/files/*
+n8n/shared/*
+!n8n/files/.gitkeep
+!n8n/shared/.gitkeep
+
+# rag/files/*
+!rag/files/.gitkeep
+
+# Supabase (keep config, ignore runtime data)
+supabase/dev/
+supabase/volumes/db/data/
+supabase/volumes/storage/local/
+
+# Bench (generated outputs/state)
+# bench/results/*
+!bench/results/.gitkeep
+!bench/results/README.md
+
+bench/grafana/data/*
+!bench/grafana/data/.gitkeep
+
+bench/prometheus/data/*
+!bench/prometheus/data/.gitkeep
+
+bench/thesis/figures/*
+!bench/thesis/figures/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+dist/
+build/
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+ENV/
+env/
+
+# Node
+node_modules/
+.npm/
+.pnpm-store/
+.yarn/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs / temp / OS
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+*.code-workspace

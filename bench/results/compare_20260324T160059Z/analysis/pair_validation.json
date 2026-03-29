@@ -1,0 +1,140 @@
+{
+  "child_batches": [
+    {
+      "endpoint": "rag",
+      "manifest": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep01-rag/manifest.json",
+      "order_index": 1,
+      "pair_order": "rag_first",
+      "pair_prompt_seed": 20260318,
+      "pair_rep": 1,
+      "results_dir": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep01-rag",
+      "validation_pass": true
+    },
+    {
+      "endpoint": "n8n",
+      "manifest": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep01-n8n/manifest.json",
+      "order_index": 2,
+      "pair_order": "rag_first",
+      "pair_prompt_seed": 20260318,
+      "pair_rep": 1,
+      "results_dir": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep01-n8n",
+      "validation_pass": true
+    },
+    {
+      "endpoint": "n8n",
+      "manifest": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep02-n8n/manifest.json",
+      "order_index": 1,
+      "pair_order": "n8n_first",
+      "pair_prompt_seed": 20260319,
+      "pair_rep": 2,
+      "results_dir": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep02-n8n",
+      "validation_pass": true
+    },
+    {
+      "endpoint": "rag",
+      "manifest": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep02-rag/manifest.json",
+      "order_index": 2,
+      "pair_order": "n8n_first",
+      "pair_prompt_seed": 20260319,
+      "pair_rep": 2,
+      "results_dir": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep02-rag",
+      "validation_pass": true
+    },
+    {
+      "endpoint": "rag",
+      "manifest": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep03-rag/manifest.json",
+      "order_index": 1,
+      "pair_order": "rag_first",
+      "pair_prompt_seed": 20260320,
+      "pair_rep": 3,
+      "results_dir": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep03-rag",
+      "validation_pass": true
+    },
+    {
+      "endpoint": "n8n",
+      "manifest": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep03-n8n/manifest.json",
+      "order_index": 2,
+      "pair_order": "rag_first",
+      "pair_prompt_seed": 20260320,
+      "pair_rep": 3,
+      "results_dir": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep03-n8n",
+      "validation_pass": true
+    }
+  ],
+  "common_values": {
+    "boundary_audit_sha": [
+      "ad9f1088cd438405a6f6185b7b1dad1ea4ff2fe26f1071d040c6b4c68c64b989"
+    ],
+    "db_fingerprint_pre": [
+      "819b4d0df6d093682f836a9870548a0ea152d31807eefbb914ec4e37f29b7a38"
+    ],
+    "prereg_id": [
+      "bachelor_n8n_vs_rag_prereg_thesis_batch_2026-03-16"
+    ],
+    "prereg_sha": [
+      "b29ff280e55c57988309d640813c771970151728ddec96686689b3fb49e9b8f7"
+    ],
+    "primary_end": [
+      "100"
+    ],
+    "primary_measure": [
+      "720"
+    ],
+    "primary_reps": [
+      "1"
+    ],
+    "primary_settle": [
+      "180"
+    ],
+    "primary_start": [
+      "10"
+    ],
+    "primary_step": [
+      "10"
+    ],
+    "prompts_path": [
+      "/bench/prompts.json"
+    ],
+    "require_boundary_audit": [
+      "1"
+    ],
+    "smoke_measure": [
+      "120"
+    ],
+    "smoke_reps": [
+      "1"
+    ],
+    "smoke_rpms": [],
+    "smoke_settle": [
+      "10"
+    ],
+    "source_fingerprint_sha256": [
+      "913340d42af9a257341d0a24277151b3492f083406a7d1ed26df15565fae0368"
+    ],
+    "stop_after_smoke": [
+      "0"
+    ],
+    "timeout_rate_max": [
+      "0.01"
+    ]
+  },
+  "failures": [],
+  "notes": [],
+  "order_balance": {
+    "expected_n8n_first_count": 1,
+    "expected_rag_first_count": 2,
+    "n8n_first_count": 1,
+    "pass": true,
+    "rag_first_count": 2
+  },
+  "pair_order_mode": "alternate_by_rep",
+  "pair_plan": "bench/results/compare_20260324T160059Z/pair_plan.json",
+  "pair_repetitions_expected": 3,
+  "parent_dir": "bench/results/compare_20260324T160059Z",
+  "pass": true,
+  "preregistration": {
+    "id": "bachelor_n8n_vs_rag_prereg_thesis_batch_2026-03-16",
+    "path": "bench/preregistration.json",
+    "sha256": "b29ff280e55c57988309d640813c771970151728ddec96686689b3fb49e9b8f7"
+  }
+}

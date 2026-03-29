@@ -1,0 +1,166 @@
+services:
+  prometheus:
+    image: prom/prometheus:v2.52.0
+    container_name: bench-prometheus
+    user: "${HOST_UID}:${HOST_GID}"
+    ports:
+      - "${PROMETHEUS_PORT:-9090}:9090"
+    volumes:
+      - ./bench/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./bench/prometheus/data:/prometheus
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--storage.tsdb.retention.time=7d"
+      - "--web.enable-admin-api"
+
+  grafana:
+    image: grafana/grafana:11.2.0
+    container_name: bench-grafana
+    ports:
+      - "${GRAFANA_PORT:-3003}:3000"
+    env_file:
+      - .env
+      - ./bench/.env
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GRAFANA_ADMIN_USER:-admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:-benchadmin}
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - ./bench/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./bench/grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - ./bench/grafana/data:/var/lib/grafana
+
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.49.1
+    container_name: bench-cadvisor
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+
+  node-exporter:
+    image: prom/node-exporter:v1.8.1
+    container_name: bench-node-exporter
+    command:
+      - "--path.rootfs=/host"
+      - "--path.procfs=/host/proc"
+      - "--path.sysfs=/host/sys"
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/host:ro
+
+  postgres-exporter:
+    image: prometheuscommunity/postgres-exporter:v0.15.0
+    container_name: bench-postgres-exporter
+    env_file:
+      - .env
+      - ./bench/.env
+    environment:
+      - DATA_SOURCE_NAME=postgresql://postgres:${POSTGRES_PASSWORD}@${POSTGRES_HOST:-db}:${POSTGRES_PORT:-5432}/${POSTGRES_DB:-postgres}?sslmode=disable
+
+  redis-exporter:
+    image: oliver006/redis_exporter:v1.62.0
+    container_name: bench-redis-exporter
+    env_file:
+      - .env
+      - ./bench/.env
+    environment:
+      - REDIS_ADDR=${REDIS_EXPORTER_ADDR:-redis://redis:6379}
+
+  jaeger:
+    image: jaegertracing/all-in-one:1.57
+    container_name: bench-jaeger
+    ports:
+      - "${JAEGER_PORT:-16686}:16686"
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+
+  otel-collector:
+    image: otel/opentelemetry-collector:0.105.0
+    container_name: bench-otel-collector
+    volumes:
+      - ./bench/otel/otel-collector.yml:/etc/otel-collector.yml:ro
+    command: ["--config=/etc/otel-collector.yml"]
+    depends_on:
+      - jaeger
+
+  k6:
+    image: grafana/k6:0.49.0
+    container_name: bench-k6
+    user: "${HOST_UID}:${HOST_GID}"
+    entrypoint: ["k6"]
+    volumes:
+      - ./bench:/bench
+    env_file:
+      - .env
+      - ./bench/.env
+
+  bench-runner:
+    build:
+      context: ./bench
+      dockerfile: Dockerfile
+    container_name: bench-runner
+    user: "${HOST_UID}:${HOST_GID}"
+    env_file:
+      - .env
+      - ./bench/.env
+    environment:
+      - BENCH_MODE=${BENCH_MODE:-perf}
+      - TIMING_LOG_DIR=${TIMING_LOG_DIR:-}
+      - N8N_EXECUTIONS_DATA_SAVE_ON_SUCCESS=${N8N_EXECUTIONS_DATA_SAVE_ON_SUCCESS:-}
+      - HOME=/tmp/bench-home
+      - XDG_CACHE_HOME=/tmp/bench-cache
+      - XDG_CONFIG_HOME=/tmp/bench-config
+      - MPLCONFIGDIR=/tmp/matplotlib
+    volumes:
+      - ./bench:/bench
+    depends_on:
+      - db
+      - redis
+
+  rag-pipeline:
+    user: "${HOST_UID}:${HOST_GID}"
+    env_file:
+      - .env
+      - ./bench/.env
+    environment:
+      - TIMING_LOG_DIR=${TIMING_LOG_DIR:-}
+      - LLM_STUB=${LLM_STUB:-false}
+      - RETRIEVAL_ONLY=${RETRIEVAL_ONLY:-false}
+      - QUERY_TIMEOUT_SECONDS=${QUERY_TIMEOUT_SECONDS:-120}
+      - RAG_TIMINGS_ON_ERROR_ONLY=${RAG_TIMINGS_ON_ERROR_ONLY:-false}
+      - LOG_OPENAI_USAGE=${LOG_OPENAI_USAGE:-false}
+      # Benchmark-time scaling knobs (do not change RAG logic).
+      - WORKER_COUNT=${RAG_WORKER_COUNT:-5}
+      - UVICORN_WORKERS=${RAG_API_WORKERS:-8}
+      # Tracing is disabled by default for fair performance runs.
+      # Enable by setting OTEL_TRACES_EXPORTER=otlp and OTEL_EXPORTER_OTLP_ENDPOINT.
+      - OTEL_SERVICE_NAME=${OTEL_SERVICE_NAME:-rag-pipeline}
+      - OTEL_SERVICE_NAMESPACE=${OTEL_SERVICE_NAMESPACE:-rag}
+      - OTEL_SERVICE_VERSION=${OTEL_SERVICE_VERSION:-0.1.0}
+      - OTEL_TRACES_EXPORTER=${OTEL_TRACES_EXPORTER:-none}
+      - OTEL_EXPORTER_OTLP_ENDPOINT=${OTEL_EXPORTER_OTLP_ENDPOINT:-}
+      - OTEL_TRACES_SAMPLER=${OTEL_TRACES_SAMPLER:-parentbased_traceidratio}
+      - OTEL_TRACES_SAMPLER_ARG=${OTEL_TRACES_SAMPLER_ARG:-0.2}
+    volumes:
+      - ./bench/results:/bench/results
+
+  # Benchmark-time overrides to minimize asymmetric logging overhead
+  n8n:
+    env_file:
+      - .env
+      - ./bench/.env
+    environment:
+      - N8N_LOG_LEVEL=info
+      - EXECUTIONS_DATA_SAVE_ON_SUCCESS=${N8N_EXECUTIONS_DATA_SAVE_ON_SUCCESS:-none}
+
+  n8n-worker:
+    env_file:
+      - .env
+      - ./bench/.env
+    environment:
+      - N8N_LOG_LEVEL=info
+      - EXECUTIONS_DATA_SAVE_ON_SUCCESS=${N8N_EXECUTIONS_DATA_SAVE_ON_SUCCESS:-none}

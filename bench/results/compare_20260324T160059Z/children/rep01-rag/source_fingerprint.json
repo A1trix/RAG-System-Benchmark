@@ -1,0 +1,626 @@
+{
+  "excludes": [
+    "**/.git/**",
+    "**/__pycache__/**",
+    "**/.pytest_cache/**",
+    "**/.mypy_cache/**",
+    "**/.ruff_cache/**",
+    "**/.venv/**",
+    "**/*.pyc",
+    "**/*.pyo",
+    "**/.DS_Store",
+    "bench/results/**",
+    "bench/prometheus/data/**",
+    "bench/grafana/data/**"
+  ],
+  "file_count": 116,
+  "files": [
+    {
+      "path": "bench/.env",
+      "sha256": "71495a8c7ac5a16ee5cbb91ba4e453a970ca7daff3acd425d9e690a6a83804bb",
+      "size": 6187
+    },
+    {
+      "path": "bench/Dockerfile",
+      "sha256": "c52c9e051eac55d557c327e9441d1b4713b1be4877decd8bfb5419fc4a6d343b",
+      "size": 143
+    },
+    {
+      "path": "bench/README.md",
+      "sha256": "028feda552b476b0a1e9c78d2eac9d39eef126659a3898c82756b8bb7578e58d",
+      "size": 8422
+    },
+    {
+      "path": "bench/docs/README.md",
+      "sha256": "f65e74a5aff32aef27d0af43a4d4e7e0f8abb2f05740dcc61ec0f645d200dbb4",
+      "size": 771
+    },
+    {
+      "path": "bench/docs/compare_plan.md",
+      "sha256": "0c658dee341807450e67d2f575ab2fbfc362374dfb9cd8a73c5038de4083486f",
+      "size": 4326
+    },
+    {
+      "path": "bench/docs/final_thesis_run_checklist.md",
+      "sha256": "56628be165b18402c99da1fa090d7baef79a2c58c9f8fc1167e1be90e835e8b3",
+      "size": 2998
+    },
+    {
+      "path": "bench/docs/metrics.md",
+      "sha256": "ce5760ccbe58371d3229a705d6b7c7507c31ca5d06cd9623bd3f70dbe6e8c4ee",
+      "size": 8189
+    },
+    {
+      "path": "bench/docs/preregistration.md",
+      "sha256": "a61b43aadff4b0a8ad5abc4655e20237fdcc60214fff1bafd41173fecade37e6",
+      "size": 8580
+    },
+    {
+      "path": "bench/docs/protocol.md",
+      "sha256": "dc23e74c3535811e1e7ca628e223e103cb1e5354a80472885f00e8318b3bc145",
+      "size": 7244
+    },
+    {
+      "path": "bench/grafana/dashboards/docker-cadvisor.json",
+      "sha256": "0e49932a4ea1402ba2a807a7df5a642d31c5072b72a9b7f6818544a0448d8f77",
+      "size": 2859
+    },
+    {
+      "path": "bench/grafana/dashboards/n8n.json",
+      "sha256": "77170c4df10a0fbb42064f4f4afa333a9e14f7a111cc02269c162a99bba5907c",
+      "size": 5334
+    },
+    {
+      "path": "bench/grafana/dashboards/postgres-redis.json",
+      "sha256": "ff5361afc944b3e8432a6726e2d197e1ebd2a0df05693fb8c2b1c53f25b23f29",
+      "size": 5361
+    },
+    {
+      "path": "bench/grafana/dashboards/rag-pipeline.json",
+      "sha256": "11708054a4fdf11d21f7c55ac8257463bfd02796b495436684dd62afe2ee4159",
+      "size": 5349
+    },
+    {
+      "path": "bench/grafana/provisioning/dashboards/dashboards.yml",
+      "sha256": "55619b72d604b7eee7900e2fdceb18260cd7e804e1586ff2e102cfb5b0f37fd0",
+      "size": 185
+    },
+    {
+      "path": "bench/grafana/provisioning/datasources/datasource.yml",
+      "sha256": "9899f6354c570a5f60b89fec5b76d0a7df4e2fb1ac38337321da3228f244dac6",
+      "size": 140
+    },
+    {
+      "path": "bench/helpers/analysis/analyze_sweep.py",
+      "sha256": "6676e652980798c14a3bf6fa38507556890cc1338bd1c380b2c6bd6d0662b3a4",
+      "size": 336
+    },
+    {
+      "path": "bench/helpers/analysis/analyze_timeouts.py",
+      "sha256": "87aaf9a9e891bbdba71fd0569b48ab9a620655ceabef66f9f6fde9c567aa7475",
+      "size": 4114
+    },
+    {
+      "path": "bench/helpers/analysis/compare_isolated_batches.py",
+      "sha256": "67a999604bd91ca24183fa76e6c29219801d07702efcbb6fc5892cf6c08ee1d4",
+      "size": 48278
+    },
+    {
+      "path": "bench/helpers/analysis/dropped_iterations_report.py",
+      "sha256": "1ab5574fcdac8ff644eadc723c390938381cd00a4add35b500759667705f0ae4",
+      "size": 15942
+    },
+    {
+      "path": "bench/helpers/analysis/prereg_decision.py",
+      "sha256": "b45aee03b2843752a3fcb555f088695949f1cad13823c63a3367086f1b0b4850",
+      "size": 2249
+    },
+    {
+      "path": "bench/helpers/analysis/sweep_analysis/__init__.py",
+      "sha256": "d5fcb2bb1e3d3195e3c9c1b33f1fc11d13d90cd3457a10c80b4928d77405dace",
+      "size": 63
+    },
+    {
+      "path": "bench/helpers/analysis/sweep_analysis/aggregation.py",
+      "sha256": "ed25141114f8ff7f1a2fd60609a1180203f4f04306f4b9685dfef42f81b8e405",
+      "size": 11724
+    },
+    {
+      "path": "bench/helpers/analysis/sweep_analysis/config.py",
+      "sha256": "e90726f96c232d319022bc150dc0ab2f069c4940ebf5136aa5f4d0d8990c2c6e",
+      "size": 4015
+    },
+    {
+      "path": "bench/helpers/analysis/sweep_analysis/discovery.py",
+      "sha256": "f737d9bbf848e62920698633daa5a588d7a3b0190967454122a3cd15ec335e1d",
+      "size": 1954
+    },
+    {
+      "path": "bench/helpers/analysis/sweep_analysis/io_utils.py",
+      "sha256": "c665ed73ad9314d6525c49a8d3da0f7a6e9a8dee6618f9d0e390970e7800aa8c",
+      "size": 1673
+    },
+    {
+      "path": "bench/helpers/analysis/sweep_analysis/knee.py",
+      "sha256": "ff7ee442c378cb3497f22510dcdc0e0666843b2e388d221df4bef42ff1bc1f95",
+      "size": 9335
+    },
+    {
+      "path": "bench/helpers/analysis/sweep_analysis/metrics.py",
+      "sha256": "1a86cadf134878645bd7ae47cfd74885feb56ca8c18dd0c227f03a5bbd731bdd",
+      "size": 5308
+    },
+    {
+      "path": "bench/helpers/analysis/sweep_analysis/pipeline.py",
+      "sha256": "be9d6812961a20e8184e58eb935fef9884392cd57b6c7ad1c90bffa0e5dbdb4f",
+      "size": 5366
+    },
+    {
+      "path": "bench/helpers/analysis/sweep_analysis/plots.py",
+      "sha256": "e59c93545fca1927653c432872fe8a2f460139779f6b1f13eb9e6443d6b2c0ce",
+      "size": 21746
+    },
+    {
+      "path": "bench/helpers/analysis/sweep_analysis/prompt_mix.py",
+      "sha256": "d8bbd77db55d9ceed2f252a7ca53f77e01648ea8a474a447d04ea8354d55dc6b",
+      "size": 8517
+    },
+    {
+      "path": "bench/helpers/analysis/sweep_analysis/rep_analysis.py",
+      "sha256": "832f468242329da8c07e77f0a9f7f071e1f0a980ce621c7a98a6fdd606215c9e",
+      "size": 16815
+    },
+    {
+      "path": "bench/helpers/analysis/sweep_analysis/reports.py",
+      "sha256": "d40cbd45c98dfe52eb3454d21a0e00969701e976b8f0e7b8b52af9da7c67d7ea",
+      "size": 7850
+    },
+    {
+      "path": "bench/helpers/analysis/sweep_analysis/stats.py",
+      "sha256": "4ab10cad62f5285aef06475d8f96235cce9a38207ccf1dc664ea1a189b28b6eb",
+      "size": 1699
+    },
+    {
+      "path": "bench/helpers/analysis/sweep_analysis/types.py",
+      "sha256": "8f73b34ddc08733751b727d137b5754921b42216f8f933c7c66a561606912ab9",
+      "size": 171
+    },
+    {
+      "path": "bench/helpers/analysis/sweep_decision.py",
+      "sha256": "8c19ecde1387ca6ff81bcc99b56438b93bdebe7c0c707fec111c722d5e2d5bfb",
+      "size": 18562
+    },
+    {
+      "path": "bench/helpers/artifacts/collect_active_images.py",
+      "sha256": "116202d6fb57dfce2e22858fc5a8030c12135a012bdfadafc5fdb0ddbe2c209d",
+      "size": 3757
+    },
+    {
+      "path": "bench/helpers/artifacts/db_fingerprint.py",
+      "sha256": "7c2073de2836b89b311997be348e9634cd0a20d88185565acf61213373c3aac9",
+      "size": 7461
+    },
+    {
+      "path": "bench/helpers/artifacts/manifest.py",
+      "sha256": "c6a981a130284472a90b89f07f8e81f42cc2ca7f93b93ff0b1599b52790579e0",
+      "size": 15214
+    },
+    {
+      "path": "bench/helpers/artifacts/source_fingerprint.py",
+      "sha256": "3258bf34e80e754b56de35ff89c7845869fc167f2f09ca36a7f52c83fcbc73d6",
+      "size": 6089
+    },
+    {
+      "path": "bench/helpers/artifacts/validate_thesis_batch.py",
+      "sha256": "1eff4fa7179041ea5416f3857c0e350b66c8e8f62b9b41b2750154c7baf54f41",
+      "size": 11221
+    },
+    {
+      "path": "bench/helpers/artifacts/validate_thesis_pair.py",
+      "sha256": "989c8f3d8e03eebf1369a37772f922888b0015ac1919d39fa0b219ef76b7cd22",
+      "size": 17850
+    },
+    {
+      "path": "bench/helpers/audit/boundary_audit_report.py",
+      "sha256": "4ff78db41f8e19bcdd300c4855629b83cb07ee1dcb30a83477f82ee436447773",
+      "size": 15393
+    },
+    {
+      "path": "bench/helpers/audit/boundary_audit_requests.py",
+      "sha256": "2664d0c4398068e409cdee49ac389f57831276a7b8fd30a452961734413c68dd",
+      "size": 10381
+    },
+    {
+      "path": "bench/helpers/audit/n8n_set_workflow_openai_credential.py",
+      "sha256": "d2aedaf42186921a7103cc3fb4b6ea4b3baa84101392186fa1008d538ddc074f",
+      "size": 6722
+    },
+    {
+      "path": "bench/helpers/audit/n8n_workflow_snapshot.py",
+      "sha256": "9b3f0a6f5154b4ec7712d842a66d10ac2c7de9ed2329ee4f99a26070663e5702",
+      "size": 13439
+    },
+    {
+      "path": "bench/helpers/audit/validate_n8n_workflow_constraints.py",
+      "sha256": "eca1d1809c9401666a9fd7f18bd0c2a91138df2bbc0378a91ac50fd2fbcccc35",
+      "size": 10440
+    },
+    {
+      "path": "bench/helpers/run/append_run_entry.py",
+      "sha256": "98dfe3f7f0d83eaa189e4dc94f713f8d8a7ceb7e2afd9f3f745a45e2f0692f15",
+      "size": 3483
+    },
+    {
+      "path": "bench/helpers/run/boundary_report_pass.py",
+      "sha256": "6b60684a2c1e0baa4a89cad42ee8f65c13c85f6d00b27c230cc8be64e359f4af",
+      "size": 547
+    },
+    {
+      "path": "bench/helpers/run/check_vectors_for_file.py",
+      "sha256": "2e43e9c3c386d72d8725685678685a2a3c95f9594de60a1455833631afb3a079",
+      "size": 1173
+    },
+    {
+      "path": "bench/helpers/run/jsonl_has_run_id.py",
+      "sha256": "e66bf002ed6fb3e85a10c5869d0405d201a3e7bdac5bdc8a66f7304fe0a9077f",
+      "size": 984
+    },
+    {
+      "path": "bench/helpers/run/k6_summary_report.py",
+      "sha256": "63f95d700797659b6cc53a4a7b3d31f765f1428a8622f37230fbab8e52b3bc06",
+      "size": 5769
+    },
+    {
+      "path": "bench/helpers/run/k6_summary_strict.py",
+      "sha256": "7d8df30203c9e84853a6ece1234de9f412e08b180d3160e5ccacd624b083761c",
+      "size": 2470
+    },
+    {
+      "path": "bench/helpers/run/k6_summary_warning.py",
+      "sha256": "7f32a3022f038f097058e880dfbcb13961e1b7f26e6e9cf59a6927ab6c0f23cd",
+      "size": 686
+    },
+    {
+      "path": "bench/helpers/run/n8n_timings.py",
+      "sha256": "cd0ca2ef1972ba574a2ec856e3246d96fcaca9a0165581825f486e763e5f27ef",
+      "size": 6010
+    },
+    {
+      "path": "bench/helpers/run/print_failures.py",
+      "sha256": "3f855393ac362c95fa25c652aac31b03ec6f7230ce6c7fb76b935852827a4e8e",
+      "size": 928
+    },
+    {
+      "path": "bench/helpers/run/validate_boundary_attachment.py",
+      "sha256": "182348eea4af1d9319a7e794df2e4417084babc71838849445f7ea8a34b5f0dd",
+      "size": 4609
+    },
+    {
+      "path": "bench/k6/n8n.js",
+      "sha256": "0a58c24f445a02cd5859574c327201000fa1b2c631065137939ea2ae44842132",
+      "size": 16998
+    },
+    {
+      "path": "bench/k6/rag.js",
+      "sha256": "5445caf1f856175709abea8e6696db4cb5ba809e548d89234d44a96708fd9c04",
+      "size": 14559
+    },
+    {
+      "path": "bench/lib/bootstrap.sh",
+      "sha256": "66b33bcd3d7e112ab9ddf27ed6a407e2e5f67d0e2b39b924062dd6eb343637ab",
+      "size": 6264
+    },
+    {
+      "path": "bench/lib/common.sh",
+      "sha256": "1d5658897d7ff5c354e71a8755453b880df7886209d3a72f63af50d82865e6fa",
+      "size": 1452
+    },
+    {
+      "path": "bench/lib/docker.sh",
+      "sha256": "cdfc649753f9dc7c9b1188e9566d0a1634f6f35e4e0ed7a83f374f3c1905d4aa",
+      "size": 2562
+    },
+    {
+      "path": "bench/lib/finalize.sh",
+      "sha256": "445608c73ef65b1c5cc03eb51fe68f1aa5fe9382fcec1c6f26f64af23ca4cc4d",
+      "size": 4414
+    },
+    {
+      "path": "bench/lib/k6_arrival.sh",
+      "sha256": "a2f9568c4b6a9337dce5f92a88bd9f3fcbac97ef0d1becda689d6c0f5286fc68",
+      "size": 7617
+    },
+    {
+      "path": "bench/lib/repro.sh",
+      "sha256": "5dff96a85cbafbee46027d1d47c27243b5f606783b63552675b090c0fdd9c086",
+      "size": 4113
+    },
+    {
+      "path": "bench/lib/sweep.sh",
+      "sha256": "4646ddb225442ec02e66c871921814f350a96a020779264214c399d4d0ef3d29",
+      "size": 5427
+    },
+    {
+      "path": "bench/lib/validation.sh",
+      "sha256": "40dc7a9c38df820805190da3efc591a7f6ce2d869ae185d2b52586c62e9a80c8",
+      "size": 4335
+    },
+    {
+      "path": "bench/openai_proxy/Dockerfile",
+      "sha256": "7f6fedd3e3a0ef044e2853ecb167c08cc4af814c8ce9dddcfdaecfcfb19a1af0",
+      "size": 242
+    },
+    {
+      "path": "bench/openai_proxy/app.py",
+      "sha256": "0ddb78efe0621e7e74ecc19ae991bb6d738e3981d989c663331456d87d5cfdf6",
+      "size": 9323
+    },
+    {
+      "path": "bench/openai_proxy/requirements.txt",
+      "sha256": "6687e0c5282046ad4bf4c16fadd45dc1a661213e218e6981aa932b819c8d9f2a",
+      "size": 57
+    },
+    {
+      "path": "bench/otel/otel-collector.yml",
+      "sha256": "a1fb6b131b287bd984530e5c341d6b48dbb364ff948246ae4728b7ce4ad49afd",
+      "size": 399
+    },
+    {
+      "path": "bench/preregistration.json",
+      "sha256": "9f6c6deeec41ed1f47ca325e3ccdeedbc732f0cf371b6c7d771f0af8d2681867",
+      "size": 6491
+    },
+    {
+      "path": "bench/profiles/thesis_compare.env",
+      "sha256": "90f6145a9a1d2793e1a1ff7b4055264604dc44a34332642430f1b9050b10e5e2",
+      "size": 2430
+    },
+    {
+      "path": "bench/prometheus/prometheus.yml",
+      "sha256": "e463b6b38b44db0b302186455ac98debd1d3844a889cfa5c036fc9e087d58892",
+      "size": 695
+    },
+    {
+      "path": "bench/prompts.json",
+      "sha256": "29efff231731d1d0ae3656246ba8bfec22ccc74887131827481bb6bc97047a4b",
+      "size": 1853
+    },
+    {
+      "path": "bench/requirements-viz.txt",
+      "sha256": "bf93bbed0a2d6f36826aaf3a7aafe0464241265bd5dab1833b0392eb3e41b70c",
+      "size": 46
+    },
+    {
+      "path": "bench/requirements.txt",
+      "sha256": "5a31267902fa5ff18c9607b694eee9e9c36e6e2304d1f7d647cad9acc16150a5",
+      "size": 45
+    },
+    {
+      "path": "bench/run_all.sh",
+      "sha256": "3c63ef81b6aa2951787e681fa1c2c8a62062900c29fa68231d5b4fbb9dcd3856",
+      "size": 1761
+    },
+    {
+      "path": "bench/run_boundary_audit.sh",
+      "sha256": "591e30ccd18a117f1d86198a0494dc7957763d2ffb8f7b7636212eedd06303c3",
+      "size": 11694
+    },
+    {
+      "path": "bench/run_compare_pair.sh",
+      "sha256": "2fed591850425fe663d285abd184f6c2b5504281127007f04aab6442af9706e3",
+      "size": 7871
+    },
+    {
+      "path": "docker-compose.bench.yml",
+      "sha256": "23799e9470f22e5e6e4ad4ae37225a2a1a12174426b606f4bc9f53ba3106142e",
+      "size": 5092
+    },
+    {
+      "path": "docker-compose.yml",
+      "sha256": "3797a22b38bbc0dee4f7bd364f20168f9b4f0fa3719798b21b5a6d0a3cd74d61",
+      "size": 20452
+    },
+    {
+      "path": "n8n_workflows/PGVector/README.md",
+      "sha256": "f8bc6143064df385d0552cabb0a65c7f04f462e48b83350b1dffe1dc1ab3aeec",
+      "size": 784
+    },
+    {
+      "path": "n8n_workflows/PGVector/chatbot.json",
+      "sha256": "cd66276a20538bfd648af8f7322e23b43f653c6348b40f78df697483937d43e4",
+      "size": 8092
+    },
+    {
+      "path": "n8n_workflows/README.md",
+      "sha256": "0711a01668031e4a219cc5aa6fe8f8541365f5b073377fb09303463f8da95df0",
+      "size": 138
+    },
+    {
+      "path": "rag_service/Dockerfile",
+      "sha256": "86a6a2e85c8eb637aa52debd442d350eb0633a263baa95bc9cef4ad03e417081",
+      "size": 580
+    },
+    {
+      "path": "rag_service/README.md",
+      "sha256": "4b302b86c87265e1a032da0c07602a52ad17e99f008a7feb82c05248168a2916",
+      "size": 4665
+    },
+    {
+      "path": "rag_service/__init__.py",
+      "sha256": "3b96b6b17639d35bc1e6a9342a33a1b859ad6a5ea2a9840a0451f0473bb556d7",
+      "size": 22
+    },
+    {
+      "path": "rag_service/app.py",
+      "sha256": "92157af236c7974dde676de13ee89358300ebdf2000203114daa84b041d28147",
+      "size": 19275
+    },
+    {
+      "path": "rag_service/cache.py",
+      "sha256": "4d287ac0a29d37b1ff0e2978e5bede402ca76d0374703215a2cc779a1913de42",
+      "size": 17625
+    },
+    {
+      "path": "rag_service/chat_memory.py",
+      "sha256": "8aa38bd99e7580c3dc5c58076406f8ac097ca561c5747529cc4fd790190ec762",
+      "size": 4149
+    },
+    {
+      "path": "rag_service/chunker.py",
+      "sha256": "c57a6632151ce80e1b006c3171e5bf93a26f86079d20c6ab2949e0375bff6a8f",
+      "size": 614
+    },
+    {
+      "path": "rag_service/circuit_breaker.py",
+      "sha256": "a56e25fecfa1c91ac242b26d6223a4cb93ffe9e1d076f8e1eb80f95f8d6736da",
+      "size": 6047
+    },
+    {
+      "path": "rag_service/config.py",
+      "sha256": "ec057e4a3d7be885cc9fed0de35ec466a754fd6ab6c8887d32c8df66e01b5b4e",
+      "size": 4049
+    },
+    {
+      "path": "rag_service/db.py",
+      "sha256": "1149d874b3e2601dee14954bb31a535cafd1683d6460b1a8bc0d4672ab385d79",
+      "size": 9530
+    },
+    {
+      "path": "rag_service/delete.py",
+      "sha256": "f46b0ec57ff2a4ed86cb340e320832e4e7e495467859338ccf006d59b10da66d",
+      "size": 413
+    },
+    {
+      "path": "rag_service/embeddings.py",
+      "sha256": "1008bbf6d1cb3ef0d1491a96f4920da176c1b2f90642d1d2485085a34d75016f",
+      "size": 3589
+    },
+    {
+      "path": "rag_service/ingest.py",
+      "sha256": "2e00890433ae9b80011cb51849287f3accf9cd6d57e799774152ef8828d6abd1",
+      "size": 6676
+    },
+    {
+      "path": "rag_service/llm.py",
+      "sha256": "2ef8d0cf53ae152cdcbf862879f5fe1487b86fe5e6503707752df9e4382f62e9",
+      "size": 14063
+    },
+    {
+      "path": "rag_service/llm_cache.py",
+      "sha256": "4063f0ac6ab251b6017bdd0a579fdb50aa75469bde56c7a5a17830a0c25d26a7",
+      "size": 11048
+    },
+    {
+      "path": "rag_service/metrics.py",
+      "sha256": "3e9b5361d784dd996f9130f456160d4255f9d12065efa1661c12dc5cb8c7f127",
+      "size": 3042
+    },
+    {
+      "path": "rag_service/middleware.py",
+      "sha256": "7893bda39ed1466239583c853aa5fe21773daa8b21e727de4252edc6be32f8c8",
+      "size": 4381
+    },
+    {
+      "path": "rag_service/migrations/README_IVFFlat.md",
+      "sha256": "e04fcc6562d814c3eb6b9dff611e9a65664b90782dcb4956a20fbd26e34c1dd6",
+      "size": 3194
+    },
+    {
+      "path": "rag_service/migrations/create_ivfflat_index.sql",
+      "sha256": "1db2175112c32fea553c3d990b0f49de5804e733df6f0ecc1104e786bd2494b1",
+      "size": 2053
+    },
+    {
+      "path": "rag_service/models.py",
+      "sha256": "e073355a07126ea35688683c4eb07c67e4b4ca40f854c4610ac6a4936c01a44c",
+      "size": 2122
+    },
+    {
+      "path": "rag_service/otel.py",
+      "sha256": "1c4530646c8f9f33a04f7dd07c7a6eaf2e1053acf26620b344a7e7aba42aa909",
+      "size": 2990
+    },
+    {
+      "path": "rag_service/query.py",
+      "sha256": "dd34c28eecd255cf216c6c737e54d5a87e2143c920fb9c0871307ed6b57b52bc",
+      "size": 13307
+    },
+    {
+      "path": "rag_service/requirements.txt",
+      "sha256": "8ef39ee65404ddcd30e8ecd423820002f0bf4c1925aae76e6f88286e7eb1c969",
+      "size": 476
+    },
+    {
+      "path": "rag_service/rerank.py",
+      "sha256": "b9b31dd77326d6480cf34531a96574f336ef1cde460f77404feac9382ef41800",
+      "size": 849
+    },
+    {
+      "path": "rag_service/start.sh",
+      "sha256": "79ed3212993082b01885a453d0f5e2791a481b2cfb63219fe54ef11a65e712c6",
+      "size": 512
+    },
+    {
+      "path": "rag_service/test_circuit_breaker.py",
+      "sha256": "ae8ca654c272169f78fe9aca7dae5a4d7268998083b35af74cdefa56810a3aec",
+      "size": 6766
+    },
+    {
+      "path": "rag_service/vector_store.py",
+      "sha256": "c0614b08fb16bacde39c3f2c6eab1113f664ca9be6aecf7a6328d7a68eb17da3",
+      "size": 8505
+    },
+    {
+      "path": "rag_service/watcher.py",
+      "sha256": "35d20fd86478ac10f09fe49edffa14f3151d557fdd7eac301a6e718ff497c2dc",
+      "size": 3703
+    },
+    {
+      "path": "rag_service/workers/__init__.py",
+      "sha256": "ff15a5e3ed1466c97403e0d6b4dd910d4c0bfa5572bcbc8a444bac95c7e78561",
+      "size": 17
+    },
+    {
+      "path": "rag_service/workers/ingest_worker.py",
+      "sha256": "d879a1f4ce227283039c2e511d82a7d3d1c520cf5ffe06d54a0a12c196fb776e",
+      "size": 1919
+    },
+    {
+      "path": "rag_service/workers/queue.py",
+      "sha256": "864eedd5f4bae625282117fd06b4dd240f1866903abb6b1dbae8769400404348",
+      "size": 176
+    },
+    {
+      "path": "rag_service/workers/tasks.py",
+      "sha256": "d6d6d0a4711dda7ad2bdaa4910fd6c046a97bb8f37ee823aef5956f63e173980",
+      "size": 8721
+    }
+  ],
+  "fingerprint_sha256": "913340d42af9a257341d0a24277151b3492f083406a7d1ed26df15565fae0368",
+  "generated_at": "2026-03-24T16:02:38.845220+00:00",
+  "missing_roots": [],
+  "roots": [
+    {
+      "label": "rag_service",
+      "path": "/src/rag_service"
+    },
+    {
+      "label": "n8n_workflows",
+      "path": "/src/n8n_workflows"
+    },
+    {
+      "label": "bench",
+      "path": "/bench"
+    },
+    {
+      "label": "docker-compose.yml",
+      "path": "/src/docker-compose.yml"
+    },
+    {
+      "label": "docker-compose.bench.yml",
+      "path": "/src/docker-compose.bench.yml"
+    }
+  ],
+  "total_bytes": 706715,
+  "version": 1
+}

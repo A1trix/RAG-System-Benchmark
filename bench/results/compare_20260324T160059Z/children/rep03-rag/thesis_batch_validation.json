@@ -1,0 +1,8 @@
+{
+  "failures": [],
+  "notes": [
+    "BENCH_REQUIRE_BOUNDARY_AUDIT not set to 1 in manifest"
+  ],
+  "pass": true,
+  "run_dir": "/bench/results/compare_20260324T160059Z/children/rep03-rag"
+}

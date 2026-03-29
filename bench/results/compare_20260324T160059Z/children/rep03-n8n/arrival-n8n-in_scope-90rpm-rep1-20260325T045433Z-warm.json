@@ -1,0 +1,612 @@
+{
+    "metrics": {
+        "errors_non_timeout_measure_prompt{prompt_id:p08}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "errors_non_timeout_measure_prompt{prompt_id:p13}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "data_sent": {
+            "count": 787818,
+            "rate": 875.3505782169916
+        },
+        "timeouts_measure_prompt{prompt_id:p13}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "successes_measure_prompt{prompt_id:p09}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "errors_non_timeout_measure_prompt{prompt_id:p04}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "attempts_measure_prompt{prompt_id:p13}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "errors_non_timeout_measure": {
+            "count": 1080,
+            "rate": 1.1999962230798877
+        },
+        "errors_non_timeout_measure_prompt{prompt_id:p10}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "attempts_measure_prompt{prompt_id:p03}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "vus": {
+            "value": 0,
+            "min": 0,
+            "max": 1
+        },
+        "http_req_sending": {
+            "avg": 0.10771744370370381,
+            "min": 0.044975,
+            "med": 0.105625,
+            "max": 0.219715,
+            "p(90)": 0.1349388,
+            "p(95)": 0.15014494999999997
+        },
+        "http_req_tls_handshaking": {
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0,
+            "min": 0,
+            "med": 0
+        },
+        "timeouts_measure_prompt{prompt_id:p06}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "successes_measure_prompt{prompt_id:p11}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "timeouts_measure_prompt{prompt_id:p08}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "attempts_measure_prompt{prompt_id:p15}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "timeouts_measure_prompt{prompt_id:p04}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "http_req_receiving": {
+            "p(90)": 0.12502950000000002,
+            "p(95)": 0.13290685,
+            "avg": 0.10559409777777788,
+            "min": 0.055798,
+            "med": 0.105043,
+            "max": 0.2438
+        },
+        "timeouts_measure_prompt": {
+            "count": 0,
+            "rate": 0
+        },
+        "attempts_measure_prompt{prompt_id:p01}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "http_req_connecting": {
+            "p(95)": 0.46604445,
+            "avg": 0.33151109555555613,
+            "min": 0.13814,
+            "med": 0.307208,
+            "max": 5.570657,
+            "p(90)": 0.4072779
+        },
+        "errors_non_timeout_measure_prompt{prompt_id:p11}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "successes_measure_prompt{prompt_id:p04}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "timeouts_measure_prompt{prompt_id:p05}": {
+            "rate": 0,
+            "count": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "attempts_measure_prompt{prompt_id:p05}": {
+            "rate": 0.07999974820532584,
+            "count": 72,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "successes_measure_prompt{prompt_id:p01}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "successes_measure_prompt{prompt_id:p10}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "http_req_duration": {
+            "med": 281.5091495,
+            "max": 572.539221,
+            "p(90)": 334.11034290000003,
+            "p(95)": 344.60295255,
+            "avg": 281.468273097037,
+            "min": 187.099821
+        },
+        "errors_non_timeout_measure_prompt{prompt_id:p02}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "http_req_failed": {
+            "fails": 0,
+            "passes": 1350,
+            "value": 1
+        },
+        "attempts_measure_prompt": {
+            "count": 1080,
+            "rate": 1.1999962230798877
+        },
+        "timeouts_measure_prompt{prompt_id:p01}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "timeouts_measure_prompt{prompt_id:p15}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "attempts_measure_prompt{prompt_id:p04}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "errors_total_measure": {
+            "count": 1080,
+            "rate": 1.1999962230798877
+        },
+        "timeouts_measure_prompt{prompt_id:p09}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "successes_measure_prompt{prompt_id:p15}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "iterations": {
+            "count": 1350,
+            "rate": 1.4999952788498596
+        },
+        "successes_measure_prompt{prompt_id:p05}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "attempts_measure_prompt{prompt_id:p10}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "http_req_blocked": {
+            "p(90)": 0.5567480000000001,
+            "p(95)": 0.6013669,
+            "avg": 0.45676304296296244,
+            "min": 0.196874,
+            "med": 0.43051,
+            "max": 5.68393
+        },
+        "http_non_200_measure": {
+            "count": 1080,
+            "rate": 1.1999962230798877
+        },
+        "attempts_measure_prompt{prompt_id:p11}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "data_received": {
+            "count": 395550,
+            "rate": 439.49861670300885
+        },
+        "timeouts_measure_prompt{prompt_id:p12}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "errors_non_timeout_measure_prompt{prompt_id:p03}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "http_req_waiting": {
+            "med": 281.3210425,
+            "max": 572.310837,
+            "p(90)": 333.8078257,
+            "p(95)": 344.40972445,
+            "avg": 281.25496155555544,
+            "min": 186.94485
+        },
+        "timeouts_measure_prompt{prompt_id:p02}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "errors_non_timeout_measure_prompt{prompt_id:p07}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "errors_non_timeout_measure_prompt{prompt_id:p06}": {
+            "rate": 0.07999974820532584,
+            "count": 72,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "attempts_measure_prompt{prompt_id:p02}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "successes_measure_prompt{prompt_id:p06}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "checks": {
+            "passes": 1350,
+            "fails": 4050,
+            "value": 0.25
+        },
+        "timeouts_measure_prompt{prompt_id:p10}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "timeouts_measure_prompt{prompt_id:p11}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "attempts_measure_prompt{prompt_id:p12}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "resp_body_bytes": {
+            "avg": 39,
+            "min": 39,
+            "med": 39,
+            "max": 39,
+            "p(90)": 39,
+            "p(95)": 39
+        },
+        "attempts_measure_prompt{prompt_id:p09}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "answer_chars": {
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0,
+            "min": 0,
+            "med": 0,
+            "max": 0
+        },
+        "iteration_duration": {
+            "p(95)": 345.9757122,
+            "avg": 282.8163157570374,
+            "min": 188.331903,
+            "med": 282.8379195,
+            "max": 574.077852,
+            "p(90)": 335.3500261
+        },
+        "errors_non_timeout_measure_prompt{prompt_id:p05}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "errors_non_timeout_measure_prompt{prompt_id:p15}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "successes_measure_prompt{prompt_id:p08}": {
+            "rate": 0,
+            "count": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "errors_non_timeout_measure_prompt": {
+            "count": 1080,
+            "rate": 1.1999962230798877
+        },
+        "errors_non_timeout_measure_prompt{prompt_id:p12}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "http_reqs": {
+            "count": 1350,
+            "rate": 1.4999952788498596
+        },
+        "successes_measure_prompt{prompt_id:p02}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "attempts_measure_prompt{prompt_id:p14}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "timeouts_measure_prompt{prompt_id:p07}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "attempts_measure_prompt{prompt_id:p07}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "timeouts_measure_prompt{prompt_id:p14}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "http_5xx_measure": {
+            "count": 1080,
+            "rate": 1.1999962230798877
+        },
+        "successes_measure_prompt": {
+            "rate": 0,
+            "count": 0
+        },
+        "errors_non_timeout_measure_prompt{prompt_id:p14}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "successes_measure_prompt{prompt_id:p03}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "attempts_measure_prompt{prompt_id:p06}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "successes_measure_prompt{prompt_id:p12}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "errors_non_timeout_measure_prompt{prompt_id:p09}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "timeouts_measure_prompt{prompt_id:p03}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "vus_max": {
+            "value": 100,
+            "min": 100,
+            "max": 100
+        },
+        "attempts_measure_prompt{prompt_id:p08}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "successes_measure_prompt{prompt_id:p14}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "successes_measure_prompt{prompt_id:p13}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "successes_measure_prompt{prompt_id:p07}": {
+            "count": 0,
+            "rate": 0,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "errors_non_timeout_measure_prompt{prompt_id:p01}": {
+            "count": 72,
+            "rate": 0.07999974820532584,
+            "thresholds": {
+                "count>=0": false
+            }
+        },
+        "attempts_measure": {
+            "count": 1080,
+            "rate": 1.1999962230798877
+        }
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "status is 200": {
+                    "name": "status is 200",
+                    "path": "::status is 200",
+                    "id": "6210a8cd14cd70477eba5c5e4cb3fb5f",
+                    "passes": 0,
+                    "fails": 1350
+                },
+                "contract: json output[]": {
+                    "path": "::contract: json output[]",
+                    "id": "5605520e2fe6f859c5db000cc75eb7fe",
+                    "passes": 0,
+                    "fails": 1350,
+                    "name": "contract: json output[]"
+                },
+                "answer non-empty": {
+                    "name": "answer non-empty",
+                    "path": "::answer non-empty",
+                    "id": "e5f49b35efc63ee18e9645afbf5e8015",
+                    "passes": 0,
+                    "fails": 1350
+                },
+                "citation present": {
+                    "id": "f4e0df038e3a5ec9e4edfebe5dd57563",
+                    "passes": 1350,
+                    "fails": 0,
+                    "name": "citation present",
+                    "path": "::citation present"
+                }
+            }
+    }
+}

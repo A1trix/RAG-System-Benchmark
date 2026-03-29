@@ -1,0 +1,45 @@
+# x-defaults: &defaults
+#   platform: linux/arm64
+
+services:
+  traefik:
+    # <<: *defaults
+    image: traefik:v3.6.2
+    command:
+      # Enable Docker provider for internal routing
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+
+      # Internal HTTP entrypoint for Supabase Studio/storage proxying
+      - "--entrypoints.web.address=:80"
+
+      - "--log.level=INFO"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+  storage:
+    labels:
+      - traefik.enable=true
+
+      # 1) Studio UI → rewrite to real API
+      - traefik.http.routers.storage-ui.rule=PathPrefix(`/project/default/storage/`)
+      - traefik.http.routers.storage-ui.entrypoints=web
+      - traefik.http.middlewares.storage-ui-strip.replacepathregex.regex=^/project/default/storage/(.*)
+      - traefik.http.middlewares.storage-ui-strip.replacepathregex.replacement=/storage/v1/$1
+
+      # 2) Direct API → rewrite to internal storage-api paths
+      - traefik.http.routers.storage-api.rule=PathPrefix(`/storage/v1/`)
+      - traefik.http.routers.storage-api.entrypoints=web
+      - traefik.http.middlewares.storage-api-strip.replacepathregex.regex=^/storage/v1/(.*)
+      - traefik.http.middlewares.storage-api-strip.replacepathregex.replacement=/$1
+
+      # 3) Inject Authorization for both flows
+      - traefik.http.middlewares.storage-auth.headers.customrequestheaders.Authorization=Bearer ${SERVICE_ROLE_KEY}
+
+      # 4) Apply middlewares
+      - traefik.http.routers.storage-ui.middlewares=storage-ui-strip,storage-auth
+      - traefik.http.routers.storage-api.middlewares=storage-api-strip,storage-auth
+
+      # 5) Upstream target inside the container
+      - traefik.http.services.storage.loadbalancer.server.port=5000
+

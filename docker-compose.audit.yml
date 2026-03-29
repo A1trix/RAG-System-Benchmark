@@ -1,0 +1,59 @@
+services:
+  openai-proxy-rag:
+    build:
+      context: ./bench/openai_proxy
+      dockerfile: Dockerfile
+    container_name: bench-openai-proxy-rag
+    user: "${HOST_UID}:${HOST_GID}"
+    env_file:
+      - .env
+      - ./bench/.env
+    environment:
+      - PROXY_CLIENT_ID=rag
+      - PROXY_RUN_ID=${BOUNDARY_AUDIT_RUN_ID:-}
+      - PROXY_LOG_FILE=/bench/results/${BOUNDARY_AUDIT_DIR:-boundary_audit}/openai_proxy_rag.jsonl
+      - UPSTREAM_OPENAI_BASE_URL=${UPSTREAM_OPENAI_BASE_URL:-https://api.openai.com}
+      - PROXY_TIMEOUT_SECONDS=${PROXY_TIMEOUT_SECONDS:-180}
+    volumes:
+      - ./bench/results:/bench/results
+
+  openai-proxy-n8n:
+    build:
+      context: ./bench/openai_proxy
+      dockerfile: Dockerfile
+    container_name: bench-openai-proxy-n8n
+    user: "${HOST_UID}:${HOST_GID}"
+    env_file:
+      - .env
+      - ./bench/.env
+    environment:
+      - PROXY_CLIENT_ID=n8n
+      - PROXY_RUN_ID=${BOUNDARY_AUDIT_RUN_ID:-}
+      - PROXY_LOG_FILE=/bench/results/${BOUNDARY_AUDIT_DIR:-boundary_audit}/openai_proxy_n8n.jsonl
+      - UPSTREAM_OPENAI_BASE_URL=${UPSTREAM_OPENAI_BASE_URL:-https://api.openai.com}
+      - PROXY_TIMEOUT_SECONDS=${PROXY_TIMEOUT_SECONDS:-180}
+    volumes:
+      - ./bench/results:/bench/results
+
+  # Route rag_service through the audit proxy (audit runs only).
+  rag-pipeline:
+    environment:
+      - OPENAI_BASE_URL=http://openai-proxy-rag:8081/v1
+
+  # Env-based routing fallback for n8n OpenAI client code (audit runs only).
+  # run_boundary_audit.sh now enforces a dedicated n8n credential that points
+  # to http://openai-proxy-n8n:8081/v1 and patches workflow OpenAI nodes to it.
+  n8n:
+    environment:
+      - OPENAI_BASE_URL=http://openai-proxy-n8n:8081/v1
+      - OPENAI_API_BASE=http://openai-proxy-n8n:8081/v1
+      - OPENAI_API_BASE_URL=http://openai-proxy-n8n:8081/v1
+      # Audit runs require execution_data to inspect internals if needed.
+      - EXECUTIONS_DATA_SAVE_ON_SUCCESS=all
+
+  n8n-worker:
+    environment:
+      - OPENAI_BASE_URL=http://openai-proxy-n8n:8081/v1
+      - OPENAI_API_BASE=http://openai-proxy-n8n:8081/v1
+      - OPENAI_API_BASE_URL=http://openai-proxy-n8n:8081/v1
+      - EXECUTIONS_DATA_SAVE_ON_SUCCESS=all

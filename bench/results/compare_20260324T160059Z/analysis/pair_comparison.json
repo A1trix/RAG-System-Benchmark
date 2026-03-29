@@ -1,0 +1,102 @@
+{
+  "child_batches": [
+    {
+      "child_batch_id": "rep01-n8n",
+      "endpoint": "n8n",
+      "manifest": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep01-n8n/manifest.json",
+      "manifest_batch_kind": "isolated_child",
+      "pair_order": "rag_first",
+      "pair_prompt_seed": 20260318,
+      "pair_rep": 1,
+      "primary_prompt_mix_ok": true,
+      "results_dir": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep01-n8n"
+    },
+    {
+      "child_batch_id": "rep02-n8n",
+      "endpoint": "n8n",
+      "manifest": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep02-n8n/manifest.json",
+      "manifest_batch_kind": "isolated_child",
+      "pair_order": "n8n_first",
+      "pair_prompt_seed": 20260319,
+      "pair_rep": 2,
+      "primary_prompt_mix_ok": true,
+      "results_dir": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep02-n8n"
+    },
+    {
+      "child_batch_id": "rep03-n8n",
+      "endpoint": "n8n",
+      "manifest": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep03-n8n/manifest.json",
+      "manifest_batch_kind": "isolated_child",
+      "pair_order": "rag_first",
+      "pair_prompt_seed": 20260320,
+      "pair_rep": 3,
+      "primary_prompt_mix_ok": true,
+      "results_dir": "/home/htrius/bachelor/bench/results/compare_20260324T160059Z/children/rep03-n8n"
+    }
+  ],
+  "parent_dir": "bench/results/compare_20260324T160059Z",
+  "primary_metrics": {
+    "error_rate_total": {
+      "column": "error_rate_total_mean",
+      "comparisons": 0,
+      "higher_better": false,
+      "median_difference": {},
+      "winner": null,
+      "wins": {}
+    },
+    "latency_p95_s": {
+      "column": "latency_p95_s_mean",
+      "comparisons": 0,
+      "higher_better": false,
+      "median_difference": {},
+      "winner": null,
+      "wins": {}
+    },
+    "throughput_success_rps": {
+      "column": "throughput_success_rps_mean",
+      "comparisons": 0,
+      "higher_better": true,
+      "median_difference": {},
+      "winner": null,
+      "wins": {}
+    },
+    "timeout_rate": {
+      "column": "timeout_rate_mean",
+      "comparisons": 0,
+      "higher_better": false,
+      "median_difference": {},
+      "winner": null,
+      "wins": {}
+    }
+  },
+  "rows": [],
+  "shared_valid_offered_rpms": [
+    10,
+    20,
+    30,
+    40
+  ],
+  "validity_coverage": {
+    "n8n": {
+      "offered_rpms": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100
+      ],
+      "valid_point_count": 4,
+      "valid_rpms": [
+        10,
+        20,
+        30,
+        40
+      ]
+    }
+  }
+}

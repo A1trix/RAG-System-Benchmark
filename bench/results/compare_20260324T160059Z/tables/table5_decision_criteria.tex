@@ -1,0 +1,14 @@
+\begin{tabular}{clccccl}
+\toprule
+\textbf{\#} & \textbf{Criterion} & \textbf{RAG} & \textbf{n8n} & \textbf{Winner} & \textbf{Significant} \\
+\midrule
+1 & Validity Coverage & 10--20 RPM (2 points) & 10--100 RPM (10 points) & \cellcolor{n8nwinner}n8n & Yes \\
+2 & Timeout Rate & 0.0\% (10--20 RPM) & 0.0\% (10--20 RPM) & \cellcolor{tiecolor}Tie & No \\
+3 & Error Rate & 0.0\% (10--20 RPM) & $<$1\% (10--20 RPM) & \cellcolor{tiecolor}Comp. & No \\
+4 & Throughput & 0.162--0.322 rps & 0.160--0.297 rps & \cellcolor{ragwinner}RAG & No \\
+5 & P95 Latency & 39--42 s & 52--200 s & \cellcolor{ragwinner}RAG & Yes \\
+6 & Scalability & Fails at $>$20 RPM & Stable to 100 RPM & \cellcolor{n8nwinner}n8n & Yes \\
+\midrule
+\textbf{7} & \textbf{Final Decision} & \multicolumn{4}{c}{\cellcolor{finaldecision}\textbf{trade\_off\_not\_single\_winner}} \\
+\bottomrule
+\end{tabular}

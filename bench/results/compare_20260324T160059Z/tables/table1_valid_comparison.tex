@@ -1,0 +1,19 @@
+\begin{tabular}{cccrrrrrc}
+\toprule
+\textbf{\#} & \textbf{RPM} & \textbf{System} & \textbf{Rep} & \textbf{Throughput} & \textbf{P95 Lat.} & \textbf{Timeout} & \textbf{Error} & \textbf{Valid} \\
+ & & & & \textbf{(rps)} & \textbf{(s)} & \textbf{(\%)} & \textbf{(\%)} & \\
+\midrule
+1 & 10 & RAG & 1 & 0.163 & 39.1 & 0.0 & 0.0 & \checkmark \\
+2 & 10 & RAG & 2 & 0.160 & 34.5 & 0.0 & 0.9 & \checkmark \\
+3 & 10 & RAG & 3 & 0.161 & 37.4 & 0.0 & 0.0 & \checkmark \\
+4 & 10 & n8n & 1 & 0.160 & 52.5 & 0.0 & 0.0 & \checkmark \\
+5 & 10 & n8n & 2 & - & - & 100.0 & 100.0 & \checkmark \\
+6 & 10 & n8n & 3 & - & - & 0.0 & 100.0 & \checkmark \\
+7 & 20 & RAG & 1 & 0.322 & 41.7 & 0.0 & 0.0 & \checkmark \\
+8 & 20 & RAG & 2 & 0.307 & 47.2 & 0.0 & 0.5 & $\times$ \\
+9 & 20 & RAG & 3 & 0.324 & 37.9 & 0.0 & 0.4 & \checkmark \\
+10 & 20 & n8n & 1 & - & - & 100.0 & 100.0 & \checkmark \\
+11 & 20 & n8n & 2 & - & - & 100.0 & 100.0 & \checkmark \\
+12 & 20 & n8n & 3 & - & - & 0.0 & 100.0 & \checkmark \\
+\bottomrule
+\end{tabular}
